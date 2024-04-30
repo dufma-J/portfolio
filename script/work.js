@@ -93,17 +93,17 @@ $('#work ul li').mouseenter(function () {
         }
     });
 
-    $('.wrap_wrap').css('background-color', bgColor);
-    $('.wrap_wrap').css('color', color);
+    $('.wrap_wrap.w1').css('background-color', bgColor);
+    $('.wrap_wrap.w1').css('color', color);
     $('#work h2').text(text);
 
     if (color === '#ffffff') {
-        $('.wrap_wrap .list li img').css('filter', 'invert(100%)');
+        $('.wrap_wrap.w1 .list li img').css('filter', 'invert(100%)');
     }
 }).mouseleave(function () {
     $('#work h2').text('WORK');
     $('#work .coment p').css('display', 'none');
-    $('.wrap_wrap w1').css('background-color', 'var(--point1-color)');
-    $('.wrap_wrap w1').css('color', '#000000');
+    $('.wrap_wrap.w1').css('background-color', 'var(--point1-color)');
+    $('.wrap_wrap.w1').css('color', '#000000');
     $('.wrap_wrap .list li img').css('filter', 'none');
 });
