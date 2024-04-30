@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Dia_bold';
+    src: url(./font/KBO\ Dia\ Gothic_bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Dia_medium';
+    src: url(./font/KBO\ Dia\ Gothic_medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Dia_light';
+    src: url(./font/KBO\ Dia\ Gothic_light.ttf) format('truetype');
+}

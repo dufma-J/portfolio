@@ -1,0 +1,1329 @@
+@import url(./font.css);
+@import url(./vars.css);
+body,
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+body .flex,
+html .flex {
+  display: flex;
+}
+body *,
+html * {
+  font-family: "Dia_light";
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-color);
+  overflow-x: hidden;
+}
+
+#home {
+  position: relative;
+}
+#home nav {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translatex(-50%);
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  background-color: var(--point2-color);
+  z-index: 999;
+}
+@media only screen and (max-width : 819px) {
+  #home nav {
+    display: none;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #home nav {
+    display: none;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #home nav {
+    display: block;
+  }
+}
+#home nav ul {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  font-size: 22px;
+  padding: 0px 50px;
+}
+#home nav ul li a {
+  font-family: "Dia_bold";
+  display: block;
+  padding: 5px;
+  transition: 0.35s;
+}
+#home nav ul li a:hover {
+  color: var(--point1-color);
+  text-shadow: 1px 1px 5px #000;
+}
+#home nav ul li a.on {
+  color: var(--point1-color);
+  text-shadow: 1px 1px 5px #000;
+}
+#home nav ul img {
+  width: 50px;
+  transition: 0.35s;
+}
+#home nav ul img:hover {
+  transform: rotate(180deg);
+}
+#home .mobile-menu .icon {
+  top: 10px;
+  right: 10px;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+}
+@media only screen and (max-width : 819px) {
+  #home .mobile-menu .icon {
+    display: block;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #home .mobile-menu .icon {
+    display: block;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #home .mobile-menu .icon {
+    display: none;
+  }
+}
+#home .mobile-menu .icon.on span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 11px);
+}
+#home .mobile-menu .icon.on span:nth-child(2) {
+  display: none;
+}
+#home .mobile-menu .icon.on span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+#home .mobile-menu .icon span {
+  transition: 0.35s;
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin: 10px 5px;
+  border-radius: 99px;
+  background: var(--black);
+}
+#home .mobile-menu .menu {
+  position: fixed;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  transition: 0.35s;
+}
+#home .mobile-menu .menu ul {
+  font-size: 35px;
+}
+#home .mobile-menu .menu ul li {
+  margin: 20px;
+}
+#home .mobile-menu .menu ul li a {
+  display: block;
+}
+#home .wrap {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--point2-color);
+}
+#home .wrap img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+#home .wrap h1 {
+  position: relative;
+  font-family: "Dia_bold";
+  font-size: 60px;
+}
+#home .wrap p {
+  font-size: 24px;
+  padding: 20px 0px 50px;
+}
+#home .wrap .a-arrow {
+  display: block;
+  position: absolute;
+}
+@media only screen and (max-width : 819px) {
+  #home .wrap .a-arrow {
+    top: 110%;
+    right: 50%;
+    transform: translate(50%, 0%);
+    width: 40px;
+    height: 60px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #home .wrap .a-arrow {
+    top: 110%;
+    right: 50%;
+    transform: translate(50%, 0%);
+    width: 55px;
+    height: 80px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #home .wrap .a-arrow {
+    top: 85%;
+    right: 35%;
+    transform: translate(50%, 0%);
+    width: 70px;
+    height: 100px;
+  }
+}
+#home .wrap .a-arrow img {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  filter: invert(100%);
+}
+#home .wrap .a-arrow img:nth-child(1) {
+  animation: arrowani 3s ease 0s infinite normal both;
+}
+#home .wrap .a-arrow img:nth-child(2) {
+  animation: arrowani 3s ease 1s infinite normal both;
+}
+#home .wrap .a-arrow img:nth-child(3) {
+  animation: arrowani 3s ease 2s infinite normal both;
+}
+@keyframes arrowani {
+  from {
+    top: 0%;
+    left: 0%;
+    opacity: 1;
+  }
+  to {
+    top: 70%;
+    left: 0%;
+    opacity: 0;
+  }
+}
+#home .wrap .a-text {
+  padding: 5px 10px;
+  font-size: 24px;
+  border-radius: 30px;
+  transition: 0.35s;
+  font-family: "Dia_bold";
+  background-color: var(--white100);
+}
+#home .wrap .a-text:hover {
+  background-color: var(--main-color);
+  color: var(--point1-color);
+}
+#home .wrap .a-img {
+  position: relative;
+}
+@media only screen and (max-width : 819px) {
+  #home .wrap .a-img {
+    display: none;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #home .wrap .a-img {
+    display: none;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #home .wrap .a-img {
+    display: block;
+  }
+}
+#home .wrap .a-img p {
+  position: absolute;
+  right: 10%;
+  bottom: -5%;
+  font-size: 1.6vw;
+  font-family: "Dia_medium";
+  z-index: 90;
+  color: var(--black);
+}
+#home .wrap .a-img img {
+  width: 25%;
+  position: absolute;
+  right: 50px;
+  bottom: -70px;
+}
+#home .wrap .a-img img.logo {
+  width: 10%;
+  z-index: 50;
+  right: 11%;
+  margin-bottom: 250px;
+}
+
+#project {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width : 819px) {
+  #project {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4%;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4%;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+  }
+}
+#project .nav {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+}
+@media only screen and (max-width : 819px) {
+  #project .nav {
+    top: 5%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .nav {
+    top: 5%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .nav {
+    top: 16%;
+    right: 37%;
+    transform: translateX(0%);
+  }
+}
+#project .nav li a {
+  display: block;
+  font-size: 30px;
+  font-family: "Dia_bold";
+  letter-spacing: -2px;
+  color: var(--gray);
+  transition: 0.35s;
+}
+#project .nav li a.on {
+  color: var(--point1-color);
+}
+#project .text {
+  position: relative;
+  top: 50px;
+  padding: 10px;
+  transition: 0.5s;
+  border-radius: 30px;
+  overflow: hidden;
+  color: var(--point2-color);
+}
+@media only screen and (max-width : 819px) {
+  #project .text {
+    width: 90%;
+    height: 35%;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text {
+    width: 80%;
+    height: 35%;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text {
+    width: 32%;
+    height: 50%;
+  }
+}
+#project .text::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--point1-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  transition: 0.35s;
+  transition-delay: 0.35s;
+}
+#project .text::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  transition: 0.35s;
+}
+#project .text.active {
+  top: 0px;
+}
+#project .text.active::before {
+  height: 0;
+}
+#project .text.active::after {
+  height: 0;
+}
+#project .text h2 {
+  font-family: "Dia_bold";
+}
+@media only screen and (max-width : 819px) {
+  #project .text h2 {
+    font-size: 70px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text h2 {
+    font-size: 70px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text h2 {
+    font-size: 80px;
+  }
+}
+#project .text a {
+  border: 3px solid #000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--point2-color);
+  color: var(--white100);
+  border-radius: 99px;
+  padding: 10px 30px;
+  gap: 10px;
+}
+@media only screen and (max-width : 819px) {
+  #project .text a {
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text a {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text a {
+    margin-top: 100px;
+  }
+}
+#project .text a p {
+  font-family: "Dia_bold";
+  color: var(--black);
+}
+@media only screen and (max-width : 819px) {
+  #project .text a p {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text a p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text a p {
+    font-size: 30px;
+  }
+}
+#project .text a img {
+  animation: spanAni 8s infinite linear;
+}
+@media only screen and (max-width : 819px) {
+  #project .text a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text a img {
+    width: 35px;
+    height: 35px;
+  }
+}
+#project .text .project_coment {
+  position: relative;
+  height: 15vh;
+  margin-top: 60px;
+}
+@media only screen and (max-width : 819px) {
+  #project .text .project_coment {
+    height: 10vh;
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text .project_coment {
+    height: 10vh;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text .project_coment {
+    height: 15vh;
+    margin-top: 60px;
+  }
+}
+#project .text .project_coment li {
+  display: none;
+  font-family: "Dia_medium";
+}
+@media only screen and (max-width : 819px) {
+  #project .text .project_coment li {
+    font-size: 19px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text .project_coment li {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text .project_coment li {
+    font-size: 24px;
+  }
+}
+#project .text .project_coment li.on {
+  display: block;
+}
+#project .text .project_num {
+  position: absolute;
+  letter-spacing: -10px;
+}
+@media only screen and (max-width : 819px) {
+  #project .text .project_num {
+    font-size: 70px;
+    top: 32%;
+    right: 10px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text .project_num {
+    font-size: 70px;
+    top: 32%;
+    right: 10px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text .project_num {
+    font-size: 80px;
+    top: 10px;
+    right: 10px;
+  }
+}
+#project .text .project_num li {
+  display: none;
+  font-family: "Dia_bold";
+  font-size: 80px;
+}
+#project .text .project_num li.on {
+  display: block;
+}
+#project .img {
+  position: relative;
+  height: 60vh;
+  border-radius: 30px;
+  overflow: hidden;
+}
+@media only screen and (max-width : 819px) {
+  #project .img {
+    width: 90%;
+    height: 40%;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .img {
+    width: 80%;
+    height: 40%;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .img {
+    width: 40%;
+    height: 60%;
+  }
+}
+#project .img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--point1-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  transition: 0.35s;
+  transition-delay: 0.35s;
+}
+#project .img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  transition: 0.35s;
+}
+#project .img.active::before {
+  width: 0;
+}
+#project .img.active::after {
+  width: 0;
+}
+#project .img ul {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+#project .img ul li {
+  width: 100%;
+  height: 100%;
+}
+#project .img ul li:nth-child(1) {
+  background: url(../img/splide1.jpg) no-repeat center;
+  background-size: cover;
+}
+#project .img ul li:nth-child(2) {
+  background: url(../img/splide2.jpg) no-repeat center;
+  background-size: cover;
+}
+#project .img ul li:nth-child(3) {
+  background: url(../img/splide3.jpg) no-repeat center;
+  background-size: cover;
+}
+#project .img ul li:nth-child(4) {
+  background: url(../img/splide4.jpg) no-repeat center;
+  background-size: cover;
+}
+#project .splide {
+  border: 3px solid #000;
+  width: 200px;
+  border-radius: 99px;
+  overflow: hidden;
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--point2-color);
+  z-index: 10;
+}
+@media only screen and (max-width : 819px) {
+  #project .splide {
+    display: none;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .splide {
+    display: none;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .splide {
+    display: inline;
+  }
+}
+#project .splide .splide__list {
+  display: flex;
+  align-items: center;
+}
+#project .splide .splide__list li {
+  padding: 10px 0px;
+  font-size: 25px;
+  font-family: "Dia_bold";
+}
+#project .splide .splide__list li img {
+  width: 30px;
+  height: 30px;
+}
+
+.wrap_wrap {
+  display: inline;
+  border: 3px solid #000;
+  width: 2200px;
+  border-radius: 99px;
+  overflow: hidden;
+  position: absolute;
+  transition: 0.5s;
+  z-index: 50;
+}
+.wrap_wrap.w2 {
+  rotate: 4deg;
+  background-color: var(--white100);
+}
+@media only screen and (max-width : 819px) {
+  .wrap_wrap.w2 {
+    top: 382vh;
+    left: -10%;
+  }
+}
+@media only screen and (min-width : 820px) {
+  .wrap_wrap.w2 {
+    top: 382vh;
+    left: -10%;
+  }
+}
+@media screen and (min-width : 1200px) {
+  .wrap_wrap.w2 {
+    top: 382vh;
+    left: -3%;
+  }
+}
+.wrap_wrap.w1 {
+  rotate: -7.5deg;
+  background-color: var(--point1-color);
+}
+@media only screen and (max-width : 819px) {
+  .wrap_wrap.w1 {
+    top: 245vh;
+    left: -10%;
+  }
+}
+@media only screen and (min-width : 820px) {
+  .wrap_wrap.w1 {
+    top: 265vh;
+    left: -10%;
+  }
+}
+@media screen and (min-width : 1200px) {
+  .wrap_wrap.w1 {
+    top: 195vh;
+    left: -3%;
+  }
+}
+.wrap_wrap .list {
+  display: flex;
+  gap: 20px;
+}
+.wrap_wrap .list li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  font-size: 54px;
+  font-family: "Dia_bold";
+}
+.wrap_wrap .list li img {
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+
+#work {
+  position: relative;
+  overflow: hidden;
+}
+#work .work-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#work .work-inner h2 {
+  font-family: "Dia_bold";
+  position: absolute;
+  color: transparent;
+  white-space: nowrap;
+}
+@media only screen and (max-width : 819px) {
+  #work .work-inner h2 {
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 100px;
+    -webkit-text-stroke: 3px var(--point2-color);
+  }
+}
+@media only screen and (min-width : 820px) {
+  #work .work-inner h2 {
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 100px;
+    -webkit-text-stroke: 3px var(--point2-color);
+  }
+}
+@media screen and (min-width : 1200px) {
+  #work .work-inner h2 {
+    left: 1%;
+    bottom: 0;
+    transform: translateX(0%);
+    font-size: 200px;
+    -webkit-text-stroke: 1px var(--point2-color);
+  }
+}
+#work .work-inner .coment {
+  width: 480px;
+  position: absolute;
+  left: 1.5%;
+  bottom: 24%;
+  color: var(--point2-color);
+}
+@media only screen and (max-width : 819px) {
+  #work .work-inner .coment {
+    display: none;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #work .work-inner .coment {
+    display: none;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #work .work-inner .coment {
+    display: block;
+  }
+}
+#work .work-inner .coment p {
+  display: none;
+  width: 100%;
+  height: 240px;
+  font-size: 24px;
+  font-family: "Dia_light";
+}
+#work .work-inner .coment p span {
+  display: block;
+  padding: 20px 0;
+  font-family: "Dia_medium";
+  color: var(--point1-color);
+}
+#work .work-inner ul {
+  position: absolute;
+}
+@media only screen and (max-width : 819px) {
+  #work .work-inner ul {
+    display: flex;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #work .work-inner ul {
+    display: flex;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #work .work-inner ul {
+    display: block;
+  }
+}
+@media only screen and (max-width : 819px) {
+  #work .work-inner ul.list1 {
+    top: 0%;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #work .work-inner ul.list1 {
+    top: 0%;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #work .work-inner ul.list1 {
+    top: 0;
+    right: 1%;
+  }
+}
+#work .work-inner ul.list1 li.item1 a {
+  background: url(../img/work1-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item1 a:hover {
+  background: url(../img/work1-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item2 a {
+  background: url(../img/work2-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item2 a:hover {
+  background: url(../img/work2-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item3 a {
+  background: url(../img/work3-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item3 a:hover {
+  background: url(../img/work3-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item4 a {
+  background: url(../img/work4-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item4 a:hover {
+  background: url(../img/work4-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item5 a {
+  background: url(../img/work5-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item5 a:hover {
+  background: url(../img/work5-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item6 a {
+  background: url(../img/work6-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item6 a:hover {
+  background: url(../img/work6-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item7 a {
+  background: url(../img/work7-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item7 a:hover {
+  background: url(../img/work7-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item8 a {
+  background: url(../img/work8-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item8 a:hover {
+  background: url(../img/work8-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item9 a {
+  background: url(../img/work9-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item9 a:hover {
+  background: url(../img/work9-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item10 a {
+  background: url(../img/work10-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list1 li.item10 a:hover {
+  background: url(../img/work10-2.png);
+  background-size: cover;
+}
+@media only screen and (max-width : 819px) {
+  #work .work-inner ul.list2 {
+    top: 26%;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #work .work-inner ul.list2 {
+    top: 38%;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #work .work-inner ul.list2 {
+    top: 0;
+    right: 25%;
+  }
+}
+#work .work-inner ul.list2 li.item11 a {
+  background: url(../img/work11-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item11 a:hover {
+  background: url(../img/work11-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item12 a {
+  background: url(../img/work12-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item12 a:hover {
+  background: url(../img/work12-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item13 a {
+  background: url(../img/work13-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item13 a:hover {
+  background: url(../img/work13-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item14 a {
+  background: url(../img/work14-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item14 a:hover {
+  background: url(../img/work14-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item15 a {
+  background: url(../img/work15-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item15 a:hover {
+  background: url(../img/work15-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item16 a {
+  background: url(../img/work16-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item16 a:hover {
+  background: url(../img/work16-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item17 a {
+  background: url(../img/work17-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item17 a:hover {
+  background: url(../img/work17-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item18 a {
+  background: url(../img/work18-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item18 a:hover {
+  background: url(../img/work18-2.png);
+  background-size: cover;
+}
+#work .work-inner ul li {
+  width: 100%;
+}
+@media only screen and (max-width : 819px) {
+  #work .work-inner ul li {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #work .work-inner ul li {
+    width: 280px;
+    height: 280px;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #work .work-inner ul li {
+    width: 320px;
+    height: 320px;
+  }
+}
+#work .work-inner ul li a {
+  display: block;
+  width: 90%;
+  height: 90%;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.35s;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+#work .work-inner ul li a:hover {
+  filter: grayscale(0);
+}
+
+#graphic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#graphic h2 {
+  position: absolute;
+  font-size: 90px;
+  font-family: "Dia_bold";
+  color: var(--point2-color);
+  top: 15.5%;
+  right: 1%;
+  z-index: 50;
+  rotate: -2deg;
+  letter-spacing: -5px;
+  -webkit-text-stroke: 2px black;
+}
+#graphic .splide {
+  position: relative;
+  width: 110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#graphic .splide .splide__track ul li img {
+  height: 380px;
+}
+#graphic .splide .splide__track-2 {
+  padding: 50px 0px;
+  background-color: var(--point1-color);
+  rotate: -2deg;
+}
+#graphic .splide .splide__track-2 ul li {
+  color: black;
+}
+
+#aboutme {
+  overflow: hidden;
+  position: relative;
+}
+#aboutme .readMe {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  transform: translate(50%, 50%);
+  width: 250px;
+  height: 250px;
+  z-index: 50;
+}
+#aboutme .readMe img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#aboutme .readMe img:nth-child(1) {
+  animation: spanAni2 10s infinite linear;
+}
+#aboutme .readMe img:nth-child(2) {
+  width: 65%;
+  top: -8px;
+  left: 8px;
+}
+#aboutme article {
+  width: 73vw;
+  height: 35vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+#aboutme article.s1 img {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#aboutme article.s2 img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+#aboutme article.s2 img:nth-child(1) {
+  width: 300px;
+  top: 37%;
+  left: 24%;
+  rotate: -21deg;
+}
+#aboutme article.s2 img:nth-child(2) {
+  width: 250px;
+  top: 45%;
+  left: 86%;
+  rotate: 13deg;
+}
+#aboutme article.s3 img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+#aboutme article.s3 img:nth-child(1) {
+  width: 300px;
+  top: 37%;
+  left: 9%;
+  rotate: 10deg;
+}
+#aboutme article.s3 img:nth-child(2) {
+  width: 300px;
+  top: 20%;
+  left: 86%;
+  rotate: -20deg;
+}
+#aboutme article.s4 img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+#aboutme article.s4 img:nth-child(1) {
+  width: 200px;
+  top: 55%;
+  left: 9%;
+  rotate: -9deg;
+}
+#aboutme article.s4 img:nth-child(2) {
+  width: 300px;
+  top: 42%;
+  left: 66%;
+  rotate: 20deg;
+}
+#aboutme article.s5 {
+  color: var(--point2-color);
+}
+#aboutme article.s5 h2 {
+  font-size: 100px;
+  color: transparent;
+  -webkit-text-stroke: 3px var(--point1-color);
+}
+#aboutme article.s5 .keywords {
+  position: absolute;
+  top: 32%;
+  left: 10%;
+  width: 600px;
+  height: 80px;
+  transform: translate(0%, -50%);
+  overflow: hidden;
+}
+#aboutme article.s5 ul {
+  font-size: 80px;
+}
+#aboutme article.s5 p {
+  width: 30%;
+  transform: translate(0%, -50%);
+}
+#aboutme article.s5 p.p1 {
+  left: 60%;
+  bottom: 35%;
+}
+#aboutme article.s5 p.p2 {
+  left: 60%;
+  bottom: 25%;
+}
+#aboutme article.s5 p.p3 {
+  left: 60%;
+  bottom: 15%;
+}
+#aboutme article.s5 p span {
+  display: inline-block;
+  width: 30%;
+  position: relative;
+  text-align: left;
+  font-family: "Dia_medium";
+}
+#aboutme article.s6 {
+  position: relative;
+}
+#aboutme article.s6 h2 {
+  position: absolute;
+  left: 96%;
+  bottom: 0%;
+  transform: translateX(-50%);
+  font-size: 100px;
+  color: transparent;
+  -webkit-text-stroke: 3px var(--point1-color);
+}
+#aboutme article.s6 .form {
+  position: absolute;
+  top: 0;
+  left: 5%;
+}
+#aboutme article.s6 .form h3 {
+  font-size: 40px;
+  font-family: "Dia_medium";
+  text-align: left;
+  color: var(--point2-color);
+}
+#aboutme article.s6 .form input {
+  width: 500px;
+  height: 40px;
+  text-align: left;
+  background-color: transparent;
+  border: 3px solid var(--point2-color);
+  margin-top: 5px;
+  margin-bottom: 20px;
+  outline-style: none;
+  color: var(--point2-color);
+  font-size: 36px;
+}
+#aboutme article.s6 .form a {
+  display: block;
+  width: 110px;
+  text-align: center;
+  font-size: 35px;
+  color: var(--point2-color);
+  border: 3px solid var(--point2-color);
+  font-family: "Dia_medium";
+  margin-top: 20px;
+  transition: 0.35s;
+}
+#aboutme article.s6 .form a:hover {
+  color: var(--main-color);
+  background-color: var(--point2-color);
+}
+#aboutme article.s6 .num {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  right: 1%;
+  bottom: 19%;
+}
+#aboutme article.s6 .num p {
+  white-space: nowrap;
+}
+#aboutme article.s6 .num p.n1 {
+  left: 99%;
+  bottom: 0%;
+}
+#aboutme article.s6 .num p.n2 {
+  left: 86.5%;
+  bottom: 10%;
+}
+#aboutme article h2 {
+  width: 100%;
+  text-align: left;
+  font-size: 40px;
+  color: var(--point1-color);
+  font-family: "Dia_bold";
+}
+#aboutme article p {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  color: var(--point2-color);
+  font-family: "Dia_light";
+}
+
+@keyframes spanAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spanAni2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
