@@ -33,6 +33,7 @@ $('#project .nav li a').click(function (e) {
     $('#project .project_coment li').removeClass('on')
     $('#project .project_num li').removeClass('on')
 
+    let text = $(this).attr('data-text');
     let idx = $(this).parent().index();
     let margin = idx * -100 + '%'
 
@@ -43,6 +44,7 @@ $('#project .nav li a').click(function (e) {
 
     setTimeout(function () {
         $('#project .text').addClass('active')
+        $('#project .text h2').text(text);
         $('#project .project_coment li').eq(idx).addClass('on')
         $('#project .project_num li').eq(idx).addClass('on')
     }, 850)

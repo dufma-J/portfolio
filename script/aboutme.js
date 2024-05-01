@@ -1,14 +1,16 @@
 const ani1 = gsap.timeline()
-ani1.from('#aboutme .s2', { duration: 5, y: 900 }, '+=1')
-    .from('#aboutme .s3', { duration: 5, y: 900 }, '+=1')
-    .from('#aboutme .s4', { duration: 5, y: 900 }, '+=1')
-    .from('#aboutme .s5', { duration: 5, y: 900 }, '+=1')
-    .from('#aboutme .s6', { duration: 5, y: 900 }, '+=1')
+ani1.from('#aboutme .s2', { duration: 50, yPercent: 100, delay: 10 })
+    .from('#aboutme .s3', { duration: 50, yPercent: 100, delay: 10 })
+    .from('#aboutme .s4', { duration: 50, yPercent: 100, delay: 10 })
+    .from('#aboutme .s5', { duration: 50, yPercent: 100, delay: 10 })
+    .from('#aboutme .s6', { duration: 50, yPercent: 100, delay: 10 })
+    .from('#aboutme .s7', { duration: 50, yPercent: 100, delay: 10 })
 ScrollTrigger.create({
     animation: ani1,
     trigger: '#aboutme',
     start: 'top top',
     end: '+=3000',
+    toggleActions: 'play pause none',
     scrub: true,
     pin: true,
     anticipatePin: 1,
