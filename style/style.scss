@@ -218,14 +218,24 @@ section {
         }
 
         h1 {
+            display: inline;
             position: relative;
             font-family: 'Dia_bold';
             font-size: 60px;
+            transition: 0.35s;
+
+            &:hover{
+                color: var(--point1-color);
+            }
         }
 
         p {
             font-size: 24px;
             padding: 20px 0px 50px;
+
+            span{
+                color: var(--point1-color);
+            }
         }
 
         .a-arrow {
