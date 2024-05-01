@@ -566,6 +566,10 @@ section {
 #project .text .project_coment li.on {
   display: block;
 }
+#project .text .project_coment li span {
+  color: var(--point1-color);
+  font-family: "Dia_medium";
+}
 #project .text .project_num {
   position: absolute;
   letter-spacing: -10px;
@@ -662,11 +666,11 @@ section {
   height: 100%;
 }
 #project .img ul li:nth-child(1) {
-  background: url(../img/splide1.jpg) no-repeat center;
+  background: url(../img/project01.png) no-repeat right;
   background-size: cover;
 }
 #project .img ul li:nth-child(2) {
-  background: url(../img/splide2.jpg) no-repeat center;
+  background: url(../img/project02.png) no-repeat right;
   background-size: cover;
 }
 #project .img ul li:nth-child(3) {
@@ -1271,10 +1275,15 @@ section {
   text-align: left;
   font-family: "Dia_medium";
 }
-#aboutme article.s6 {
+#aboutme article.s6 h2 {
+  font-size: 100px;
+  color: transparent;
+  -webkit-text-stroke: 3px var(--point1-color);
+}
+#aboutme article.s7 {
   position: relative;
 }
-#aboutme article.s6 h2 {
+#aboutme article.s7 h2 {
   position: absolute;
   left: 96%;
   bottom: 0%;
@@ -1283,18 +1292,18 @@ section {
   color: transparent;
   -webkit-text-stroke: 3px var(--point1-color);
 }
-#aboutme article.s6 .form {
+#aboutme article.s7 .form {
   position: absolute;
   top: 0;
   left: 5%;
 }
-#aboutme article.s6 .form h3 {
+#aboutme article.s7 .form h3 {
   font-size: 40px;
   font-family: "Dia_medium";
   text-align: left;
   color: var(--point2-color);
 }
-#aboutme article.s6 .form input {
+#aboutme article.s7 .form input {
   width: 500px;
   height: 40px;
   text-align: left;
@@ -1306,7 +1315,7 @@ section {
   color: var(--point2-color);
   font-size: 36px;
 }
-#aboutme article.s6 .form a {
+#aboutme article.s7 .form a {
   display: block;
   width: 110px;
   text-align: center;
@@ -1317,25 +1326,25 @@ section {
   margin-top: 20px;
   transition: 0.35s;
 }
-#aboutme article.s6 .form a:hover {
+#aboutme article.s7 .form a:hover {
   color: var(--main-color);
   background-color: var(--point2-color);
 }
-#aboutme article.s6 .num {
+#aboutme article.s7 .num {
   width: 500px;
   height: 300px;
   position: absolute;
   right: 1%;
   bottom: 19%;
 }
-#aboutme article.s6 .num p {
+#aboutme article.s7 .num p {
   white-space: nowrap;
 }
-#aboutme article.s6 .num p.n1 {
+#aboutme article.s7 .num p.n1 {
   left: 99%;
   bottom: 0%;
 }
-#aboutme article.s6 .num p.n2 {
+#aboutme article.s7 .num p.n2 {
   left: 86.5%;
   bottom: 10%;
 }

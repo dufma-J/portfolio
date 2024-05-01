@@ -224,7 +224,7 @@ section {
             font-size: 60px;
             transition: 0.35s;
 
-            &:hover{
+            &:hover {
                 color: var(--point1-color);
             }
         }
@@ -233,7 +233,7 @@ section {
             font-size: 24px;
             padding: 20px 0px 50px;
 
-            span{
+            span {
                 color: var(--point1-color);
             }
         }
@@ -597,6 +597,11 @@ section {
                 &.on {
                     display: block;
                 }
+
+                span {
+                    color: var(--point1-color);
+                    font-family: 'Dia_medium';
+                }
             }
         }
 
@@ -700,12 +705,12 @@ section {
                 height: 100%;
 
                 &:nth-child(1) {
-                    background: url(../img/splide1.jpg) no-repeat center;
+                    background: url(../img/project01.png) no-repeat right;
                     background-size: cover;
                 }
 
                 &:nth-child(2) {
-                    background: url(../img/splide2.jpg) no-repeat center;
+                    background: url(../img/project02.png) no-repeat right;
                     background-size: cover;
                 }
 
@@ -1433,6 +1438,14 @@ section {
         }
 
         &.s6 {
+            h2 {
+                font-size: 100px;
+                color: transparent;
+                -webkit-text-stroke: 3px var(--point1-color);
+            }
+        }
+
+        &.s7 {
             position: relative;
 
             h2 {
