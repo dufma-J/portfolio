@@ -164,13 +164,15 @@ section {
 
     .wrap {
         position: absolute;
-        width: 70%;
+        margin: 0;
+        width: 100%;
+
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: var(--point2-color);
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
 
         .cover {
@@ -183,12 +185,10 @@ section {
         }
 
         .star {
-            margin: auto;
             position: relative;
-            width: 1300px;
-            height: 400px;
+            width: 100%;
+            height: 900px;
             overflow: hidden;
-            margin-bottom: 50px;
 
             .frame {
                 z-index: 10;
@@ -198,8 +198,9 @@ section {
             }
 
             .moon {
+                display: none;
                 position: absolute;
-                width: 105%;
+                width: 95%;
                 z-index: 5;
                 top: 30%;
                 left: 0%;
@@ -210,7 +211,7 @@ section {
                 margin: 0;
                 padding: 0;
                 display: block;
-                width: 99%;
+                width: 100%;
                 height: 99%;
                 position: absolute;
                 top: 50%;
@@ -224,6 +225,14 @@ section {
         img {
             width: 100%;
             margin-bottom: 50px;
+        }
+
+        .main-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         h1 {
