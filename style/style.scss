@@ -163,12 +163,15 @@ section {
     }
 
     .wrap {
-        width: 75%;
         position: absolute;
+        width: 70%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: var(--point2-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         .cover {
             width: 1300px;
@@ -180,6 +183,7 @@ section {
         }
 
         .star {
+            margin: auto;
             position: relative;
             width: 1300px;
             height: 400px;
@@ -244,7 +248,6 @@ section {
         }
 
         .a-text {
-            position: absolute;
             padding: 5px 10px;
             font-size: 24px;
             border-radius: 30px;
