@@ -170,19 +170,25 @@ section {
         transform: translate(-50%, -50%);
         color: var(--point2-color);
 
+        .cover {
+            width: 1300px;
+            height: 10px;
+            background-color: var(--main-color);
+            position: absolute;
+            z-index: 99;
+            top: 63%;
+        }
+
         .star {
             position: relative;
-            width: 1335px;
-            height: 404px;
+            width: 1300px;
+            height: 400px;
             overflow: hidden;
+            margin-bottom: 50px;
 
             .frame {
                 z-index: 10;
                 position: absolute;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                vertical-align: top;
                 width: 100%;
                 height: 100%;
             }
@@ -193,7 +199,6 @@ section {
                 z-index: 5;
                 top: 30%;
                 left: 0%;
-
                 animation: spanAni 90s linear infinite;
             }
 
@@ -238,120 +243,17 @@ section {
             }
         }
 
-        .a-arrow {
-            @media #{$phone} {
-                top: 110%;
-                right: 50%;
-                transform: translate(50%, 0%);
-                width: 40px;
-                height: 60px;
-            }
-
-            @media #{$tablet} {
-                top: 110%;
-                right: 50%;
-                transform: translate(50%, 0%);
-                width: 55px;
-                height: 80px;
-            }
-
-            @media #{$desktop} {
-                top: 85%;
-                right: 35%;
-                transform: translate(50%, 0%);
-                width: 70px;
-                height: 100px;
-            }
-
-            display: block;
-            position: absolute;
-
-            img {
-                position: absolute;
-                top: 0%;
-                width: 100%;
-                filter: invert(100%);
-
-                &:nth-child(1) {
-                    animation: arrowani 3s ease 0s infinite normal both;
-                }
-
-                &:nth-child(2) {
-                    animation: arrowani 3s ease 1s infinite normal both;
-                }
-
-                &:nth-child(3) {
-                    animation: arrowani 3s ease 2s infinite normal both;
-                }
-            }
-
-            @keyframes arrowani {
-                from {
-                    top: 0%;
-                    left: 0%;
-                    opacity: 1;
-                }
-
-                to {
-                    top: 70%;
-                    left: 0%;
-                    opacity: 0;
-                }
-            }
-        }
-
         .a-text {
+            position: absolute;
             padding: 5px 10px;
             font-size: 24px;
             border-radius: 30px;
-            transition: 0.35s;
+            transition: 0.5s;
             font-family: 'Dia_bold';
-            background-color: var(--white100);
 
             &:hover {
                 background-color: var(--main-color);
                 color: var(--point1-color);
-            }
-        }
-
-        .a-img {
-            position: relative;
-            z-index: 20;
-
-            @media #{$phone} {
-                display: none;
-            }
-
-            @media #{$tablet} {
-                display: none;
-            }
-
-            @media #{$desktop} {
-                display: block;
-            }
-
-            p {
-                position: absolute;
-                right: 10%;
-                bottom: -5%;
-                font-size: 1.6vw;
-                font-family: 'Dia_medium';
-                z-index: 90;
-                color: var(--black);
-            }
-
-            img {
-                width: 25%;
-                position: absolute;
-                right: 50px;
-                bottom: -70px;
-
-                &.logo {
-                    width: 10%;
-                    z-index: 50;
-                    right: 11%;
-                    margin-bottom: 250px;
-                }
             }
         }
     }

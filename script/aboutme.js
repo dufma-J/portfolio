@@ -27,6 +27,3 @@ $('.send').click(function (e) {
     e.preventDefault();
     alert('봐주셔서 감사합니다.')
 })
-
-
-
