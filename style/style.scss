@@ -10,6 +10,7 @@ html {
     width: 100%;
     overflow-x: hidden;
     position: relative;
+    background-color: var(--main-color);
 
     .flex {
         display: flex;
@@ -1218,6 +1219,8 @@ section {
 #aboutme {
     overflow: hidden;
     position: relative;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 75%);
 
     .wrap {
         width: 20vw;
@@ -1237,9 +1240,168 @@ section {
             top: 0px;
             left: 0px;
 
+            &:nth-child(1) {
+                .inner {
+                    background-color: var(--point2-color);
+
+                    &::after {
+                        content: '';
+                        width: 500px;
+                        height: 500px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(to right, rgba(194, 253, 45, 0.7), transparent), url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 100%;
+                        z-index: 50;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                .inner {
+                    background: rgb(241, 87, 49);
+                    background: linear-gradient(270deg, rgba(241, 87, 49, 1) 0%, rgba(210, 204, 190, 1) 59%);
+
+                    &::after {
+                        content: '';
+                        width: 500px;
+                        height: 500px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 100%;
+                        z-index: 50;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                .inner {
+                    background: rgb(0,151,160);
+                    background: linear-gradient(54deg, rgba(0,151,160,1) 0%, rgba(229,208,187,1) 39%);
+
+                    &::after {
+                        content: '';
+                        width: 500px;
+                        height: 500px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 100%;
+                        z-index: 50;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                .inner {
+                    background: rgb(176,35,51);
+                    background: linear-gradient(163deg, rgba(176,35,51,1) 0%, rgba(254,210,203,1) 49%);
+
+                    &::after {
+                        content: '';
+                        width: 500px;
+                        height: 500px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 100%;
+                        z-index: 50;
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                .inner {
+                    background: rgb(29,69,58);
+                    background: linear-gradient(240deg, rgba(29,69,58,1) 15%, rgba(252,239,204,1) 49%);
+
+                    &::after {
+                        content: '';
+                        width: 500px;
+                        height: 500px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 100%;
+                        z-index: 50;
+                    }
+                }
+            }
+
+            &:nth-child(6) {
+                .inner {
+                    background: rgb(39, 94, 255);
+                    background: linear-gradient(143deg, rgba(39, 94, 255, 1) 0%, rgba(204, 204, 202, 1) 100%);
+
+                    &::after {
+                        content: '';
+                        width: 500px;
+                        height: 500px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 100%;
+                        z-index: 50;
+                    }
+                }
+            }
+
+            &:nth-child(7) {
+                .inner {
+                    background: rgb(229,248,252);
+                    background: radial-gradient(circle, rgba(229,248,252,1) 33%, rgba(178,126,246,1) 100%);
+
+                    &::after {
+                        content: '';
+                        width: 500px;
+                        height: 500px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 100%;
+                        z-index: 50;
+                    }
+                }
+            }
+
+            &:nth-child(8) {
+                .inner {
+                    background: rgb(232,233,227);
+                    background: radial-gradient(circle, rgba(232,233,227,1) 40%, rgba(3,100,211,1) 100%);
+
+                    &::after {
+                        content: '';
+                        width: 500px;
+                        height: 500px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 100%;
+                        z-index: 50;
+                    }
+                }
+            }
+
             &.on {
                 .inner {
-                    opacity: 0.9;
+                    opacity: 1.0;
                     transform: scale(1.1);
                 }
             }
@@ -1248,11 +1410,10 @@ section {
                 width: 500px;
                 height: 500px;
                 position: relative;
-                background: #CCCCCA;
                 box-sizing: border-box;
                 flex-wrap: wrap;
                 border-radius: 9999px;
-                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+                box-shadow: 10px 10px 20px rgba(204, 204, 204, 0.658);
                 opacity: 0.4;
                 transform: scale(0.8);
                 transition: opacity 1s, transform 1s;
@@ -1308,18 +1469,17 @@ section {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%) rotate(-90deg);
-                    z-index: 3;
+                    z-index: 60;
 
                     h2 {
-                        font-size: 20px;
-                        font-family: "arial";
+                        font-size: 24px;
+                        font-family: 'Dia_medium';
                         color: #222;
-                        margin-bottom: 2vh;
                     }
 
                     p {
-                        font-size: 12px;
-                        margin-bottom: 3vh;
+                        font-family: 'Dia_light';
+                        font-size: 18px;
                         color: #777;
                     }
                 }
@@ -1341,48 +1501,29 @@ section {
 
         &::before {
             content: "";
-            display: block;
-            width: 50%;
-            height: 1px;
-            background: #fff;
+            background: url(../img/star_w.png);
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            transition: 0.35s;
             position: absolute;
             top: 50%;
-            right: 0px;
-            transform-origin: left center;
-            transform: rotate(-180deg);
-            transition: 0.5s;
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            width: 50%;
-            height: 1px;
-            background: #fff;
-            position: absolute;
-            bottom: 50%;
-            right: 0px;
-            transform-origin: left center;
-            transform: rotate(180deg);
-            transition: 0.5s;
+            left: 20px;
+            transform: translate(-50%, -50%);
         }
 
         &:hover {
             &::before {
-                transform: rotate(-30deg);
-            }
-
-            &::after {
-                transform: rotate(30deg);
+                transform: translate(-50%, -50%) rotate(-90deg);
             }
 
             span {
-                opacity: 0;
+                transform: translatey(50%) scale(1.1);
             }
         }
 
         span {
-            font: 11px/1 "arial";
+            font-family: 'Dia_medium';
             color: #fff;
             opacity: 1;
             transform: translatey(50%);
@@ -1407,48 +1548,29 @@ section {
 
         &::before {
             content: "";
-            display: block;
-            width: 50%;
-            height: 1px;
-            background: #fff;
+            background: url(../img/star_w.png);
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            transition: 0.35s;
             position: absolute;
             top: 50%;
-            left: 0px;
-            transform-origin: right center;
-            transform: rotate(180deg);
-            transition: 0.5s;
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            width: 50%;
-            height: 1px;
-            background: #fff;
-            position: absolute;
-            bottom: 51%;
-            left: 0px;
-            transform-origin: right center;
-            transform: rotate(-180deg);
-            transition: 0.5s;
+            right: -20px;
+            transform: translate(-50%, -50%);
         }
 
         &:hover {
             &::before {
-                transform: rotate(30deg);
-            }
-
-            &::after {
-                transform: rotate(-30deg);
+                transform: translate(-50%, -50%) rotate(90deg);
             }
 
             span {
-                opacity: 0;
+                transform: translatey(-50%) scale(1.1);
             }
         }
 
         span {
-            font: 11px/1 "arial";
+            font-family: 'Dia_medium';
             color: #fff;
             opacity: 1;
             transform: translateY(-50%);
@@ -1479,17 +1601,6 @@ section {
         top: 0;
         left: 0;
         z-index: 1;
-    }
-}
-
-#frame {
-    position: relative;
-
-    .scene {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 99;
     }
 }
 
