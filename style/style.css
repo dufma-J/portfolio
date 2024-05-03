@@ -4,6 +4,7 @@ body,
 html {
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 body .flex,
 html .flex {
@@ -228,8 +229,37 @@ section {
   font-family: "Dia_bold";
 }
 #home .wrap .a-text:hover {
-  background-color: var(--main-color);
-  color: var(--point1-color);
+  background-color: var(--point1-color);
+  color: var(--black);
+}
+
+.field {
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+.field .mouse {
+  width: 40px;
+  height: 72px;
+  border: 3px solid var(--point2-color);
+  border-radius: 60px;
+  position: relative;
+}
+.field .mouse::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--point2-color);
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
 }
 
 #project {
@@ -1059,230 +1089,256 @@ section {
   overflow: hidden;
   position: relative;
 }
-#aboutme .readMe {
+#aboutme .wrap {
+  width: 20vw;
+  height: 65vh;
   position: absolute;
-  top: 1%;
-  right: 1%;
-  transform: translate(50%, 50%);
-  width: 250px;
-  height: 250px;
+  top: 13%;
+  left: -11%;
+  margin-top: -4vh;
+  transition: 1s;
+  rotate: 90deg;
   z-index: 50;
 }
-#aboutme .readMe img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
+#aboutme .wrap article {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
-#aboutme .readMe img:nth-child(1) {
-  animation: spanAni2 10s infinite linear;
+#aboutme .wrap article.on .inner {
+  opacity: 0.9;
+  transform: scale(1.1);
 }
-#aboutme .readMe img:nth-child(2) {
-  width: 65%;
-  top: -8px;
-  left: 8px;
+#aboutme .wrap article .inner {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background: #CCCCCA;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  border-radius: 9999px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0.4;
+  transform: scale(0.8);
+  transition: opacity 1s, transform 1s;
 }
-#aboutme article {
-  width: 73vw;
-  height: 35vw;
+#aboutme .wrap article .inner .pic {
+  width: 15vw;
+  height: 15vw;
+  margin: 0px auto;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 200%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#aboutme .wrap article .inner .pic.on::after {
+  animation: ani 4s linear infinite;
+}
+#aboutme .wrap article .inner .pic.on::before {
+  animation: ani2 4s linear infinite;
+}
+#aboutme .wrap article .inner .pic::before, #aboutme .wrap article .inner .pic::after {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: inherit;
+  background-position: center;
+  background-repeat: inherit;
+  background-size: cover;
+  transform-origin: center center;
+}
+#aboutme .wrap article .inner .pic::before {
+  transform: translateY(10%);
+  filter: blur(20px) brightness(1.6);
+}
+#aboutme .wrap article .inner .txt {
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-90deg);
+  z-index: 3;
+}
+#aboutme .wrap article .inner .txt h2 {
+  font-size: 20px;
+  font-family: "arial";
+  color: #222;
+  margin-bottom: 2vh;
+}
+#aboutme .wrap article .inner .txt p {
+  font-size: 12px;
+  margin-bottom: 3vh;
+  color: #777;
+}
+#aboutme .btnPrev {
+  width: 120px;
+  height: 60px;
+  position: absolute;
+  top: 35%;
+  left: 85%;
   display: flex;
-  justify-content: center;
-  background-color: var(--main-color);
-  overflow: hidden;
-}
-#aboutme article.s1 img {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#aboutme article.s2 img {
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-#aboutme article.s2 img:nth-child(1) {
-  width: 300px;
-  top: 37%;
-  left: 24%;
-  rotate: -21deg;
-}
-#aboutme article.s2 img:nth-child(2) {
-  width: 250px;
-  top: 45%;
-  left: 86%;
-  rotate: 13deg;
-}
-#aboutme article.s3 img {
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-#aboutme article.s3 img:nth-child(1) {
-  width: 300px;
-  top: 37%;
-  left: 9%;
-  rotate: 10deg;
-}
-#aboutme article.s3 img:nth-child(2) {
-  width: 300px;
-  top: 20%;
-  left: 86%;
-  rotate: -20deg;
-}
-#aboutme article.s4 img {
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-#aboutme article.s4 img:nth-child(1) {
-  width: 200px;
-  top: 55%;
-  left: 9%;
-  rotate: -9deg;
-}
-#aboutme article.s4 img:nth-child(2) {
-  width: 300px;
-  top: 42%;
-  left: 66%;
-  rotate: 20deg;
-}
-#aboutme article.s5 {
-  color: var(--point2-color);
-}
-#aboutme article.s5 h2 {
-  font-size: 100px;
-  color: transparent;
-  -webkit-text-stroke: 3px var(--point1-color);
-}
-#aboutme article.s5 .keywords {
-  position: absolute;
-  top: 32%;
-  left: 10%;
-  width: 600px;
-  height: 80px;
-  transform: translate(0%, -50%);
-  overflow: hidden;
-}
-#aboutme article.s5 ul {
-  font-size: 80px;
-}
-#aboutme article.s5 p {
-  width: 30%;
-  transform: translate(0%, -50%);
-}
-#aboutme article.s5 p.p1 {
-  left: 60%;
-  bottom: 35%;
-}
-#aboutme article.s5 p.p2 {
-  left: 60%;
-  bottom: 25%;
-}
-#aboutme article.s5 p.p3 {
-  left: 60%;
-  bottom: 15%;
-}
-#aboutme article.s5 p span {
-  display: inline-block;
-  width: 30%;
-  position: relative;
+  align-items: center;
   text-align: left;
-  font-family: "Dia_medium";
+  cursor: pointer;
+  z-index: 999;
 }
-#aboutme article.s6 h2 {
-  font-size: 100px;
-  color: transparent;
-  -webkit-text-stroke: 3px var(--point1-color);
-}
-#aboutme article.s7 {
-  position: relative;
-}
-#aboutme article.s7 h2 {
-  position: absolute;
-  left: 96%;
-  bottom: 0%;
-  transform: translateX(-50%);
-  font-size: 100px;
-  color: transparent;
-  -webkit-text-stroke: 3px var(--point1-color);
-}
-#aboutme article.s7 .form {
-  position: absolute;
-  top: 0;
-  left: 5%;
-}
-#aboutme article.s7 .form h3 {
-  font-size: 40px;
-  font-family: "Dia_medium";
-  text-align: left;
-  color: var(--point2-color);
-}
-#aboutme article.s7 .form input {
-  width: 500px;
-  height: 40px;
-  text-align: left;
-  background-color: transparent;
-  border: 3px solid var(--point2-color);
-  margin-top: 5px;
-  margin-bottom: 20px;
-  outline-style: none;
-  color: var(--point2-color);
-  font-size: 36px;
-}
-#aboutme article.s7 .form a {
+#aboutme .btnPrev::before {
+  content: "";
   display: block;
-  width: 110px;
-  text-align: center;
-  font-size: 35px;
-  color: var(--point2-color);
-  border: 3px solid var(--point2-color);
-  font-family: "Dia_medium";
-  margin-top: 20px;
-  transition: 0.35s;
-}
-#aboutme article.s7 .form a:hover {
-  color: var(--main-color);
-  background-color: var(--point2-color);
-}
-#aboutme article.s7 .num {
-  width: 500px;
-  height: 300px;
+  width: 50%;
+  height: 1px;
+  background: #fff;
   position: absolute;
-  right: 1%;
-  bottom: 19%;
+  top: 50%;
+  right: 0px;
+  transform-origin: left center;
+  transform: rotate(-180deg);
+  transition: 0.5s;
 }
-#aboutme article.s7 .num p {
-  white-space: nowrap;
+#aboutme .btnPrev::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 50%;
+  right: 0px;
+  transform-origin: left center;
+  transform: rotate(180deg);
+  transition: 0.5s;
 }
-#aboutme article.s7 .num p.n1 {
-  left: 99%;
-  bottom: 0%;
+#aboutme .btnPrev:hover::before {
+  transform: rotate(-30deg);
 }
-#aboutme article.s7 .num p.n2 {
-  left: 86.5%;
-  bottom: 10%;
+#aboutme .btnPrev:hover::after {
+  transform: rotate(30deg);
 }
-#aboutme article h2 {
+#aboutme .btnPrev:hover span {
+  opacity: 0;
+}
+#aboutme .btnPrev span {
+  font: 11px/1 "arial";
+  color: #fff;
+  opacity: 1;
+  transform: translatey(50%);
+  transition: 0.5s;
+  position: absolute;
+  bottom: 50%;
+  right: 0%;
+}
+#aboutme .btnNext {
+  width: 120px;
+  height: 60px;
+  position: absolute;
+  top: 55%;
+  left: 85%;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  cursor: pointer;
+  z-index: 999;
+}
+#aboutme .btnNext::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform-origin: right center;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+#aboutme .btnNext::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 51%;
+  left: 0px;
+  transform-origin: right center;
+  transform: rotate(-180deg);
+  transition: 0.5s;
+}
+#aboutme .btnNext:hover::before {
+  transform: rotate(30deg);
+}
+#aboutme .btnNext:hover::after {
+  transform: rotate(-30deg);
+}
+#aboutme .btnNext:hover span {
+  opacity: 0;
+}
+#aboutme .btnNext span {
+  font: 11px/1 "arial";
+  color: #fff;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+#aboutme .moon img {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: 1s;
+  z-index: 50;
+}
+#aboutme #space-container-top {
+  opacity: 1;
+  position: absolute;
   width: 100%;
-  text-align: left;
-  font-size: 40px;
-  color: var(--point1-color);
-  font-family: "Dia_bold";
-}
-#aboutme article p {
-  width: 80%;
-  position: absolute;
-  left: 50%;
-  bottom: 0%;
-  transform: translateX(-50%);
-  font-size: 25px;
-  color: var(--point2-color);
-  font-family: "Dia_light";
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
+#frame {
+  position: relative;
+}
+#frame .scene {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ani2 {
+  0% {
+    transform: translateY(10%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(10%) rotate(360deg);
+  }
+}
 @keyframes spanAni {
   0% {
     transform: rotate(0deg);
@@ -1297,5 +1353,11 @@ section {
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 48px;
   }
 }

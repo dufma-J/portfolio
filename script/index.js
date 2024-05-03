@@ -219,3 +219,6 @@ function animate() {
 
 init();
 animate();
+
+
+$('.scene').load('/aboutme.html');
