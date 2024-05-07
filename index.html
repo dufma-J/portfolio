@@ -14,7 +14,7 @@
     <section id="home">
         <nav>
             <ul class="flex">
-                <li><a href="#home"><img src="./img/logo.png" alt="logo"></a></li>
+                <li><a href="#home" class="on">HOME</a></li>
                 <li><a href="#project">PROJECT</a></li>
                 <li><a href="#work">WORK</a></li>
                 <li><a href="#graphic">GRAPHIC</a></li>
@@ -37,21 +37,24 @@
                 </ul>
             </div>
         </div>
+        <div class="parallax_camera">
+            <ul class="parallax_space">
+                <li class="parallax_layer p0"><img src="./img/planet.png" alt=""></li>
+                <li class="parallax_layer p1"><img src="./img/Comet1.png" alt=""></li>
+                <li class="parallax_layer p2"><img src="./img/Comet2.png" alt=""></li>
+            </ul>
+        </div>
         <div class="wrap">
             <div class="star">
-                <!-- <img src="./img/frame.png" alt="" class="frame"> -->
-                <img src="./img/moon.png" alt="" class="moon">
                 <canvas id="starCanvas"></canvas>
             </div>
-            <div class="main-text">
-                <h1 class="diagonal-text">Space Exploration</h1>
-                <p>우주처럼 무한한 가능성을 품은 웹 퍼블리셔, <span>장하영</span>입니다.</p>
-                <a href="#project" class="a-text">2024 PORTFOLIO</a>
-            </div>
-            <div class="field">
-                <div class="mouse"></div>
-            </div>
         </div>
+        <div class="main-text">
+            <h1 class="diagonal-text cur">Space Exploration</h1>
+            <p>우주처럼 무한한 가능성을 품은 웹 퍼블리셔, <span>장하영</span>입니다.</p>
+            <a href="#project" class="a-text">2024 PORTFOLIO</a>
+        </div>
+        <div class="cloud-bg"></div>
     </section>
     <section id="project">
         <ul class="nav">
@@ -61,7 +64,7 @@
             <li><a href="#" data-text="PROJECT">04</a></li>
         </ul>
         <div class="text">
-            <h2>Get goal</h2>
+            <h2 class="cur">Get goal</h2>
             <a href="#">
                 <p>LINK</p><img src="./img/star_b.png" alt="">
             </a>
@@ -102,20 +105,6 @@
             </div>
         </div>
     </section>
-    <div class="wrap_wrap w1">
-        <ul class="list">
-            <li class="splide__slide">INFINITE</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-            <li class="splide__slide">Exploration 50% in progress...</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-            <li class="splide__slide">CONSISTENT</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-            <li class="splide__slide">INFINITE</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-            <li class="splide__slide">Exploration 50% in progress...</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-        </ul>
-    </div>
     <section id="work">
         <div class="work-inner">
             <h2>WORK</h2>
@@ -244,7 +233,7 @@
         </div>
     </section>
     <section id="graphic">
-        <h2>GRAPHICS</h2>
+        <h2 class="cur">GRAPHICS</h2>
         <div class="splide rtl">
             <div class="splide__track splide__track-2">
                 <ul class="splide__list">
@@ -261,116 +250,100 @@
             </div>
         </div>
     </section>
-    <div class="wrap_wrap w2">
-        <ul class="list">
-            <li class="splide__slide">INFINITE</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-            <li class="splide__slide">Exploration 75% in progress...</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-            <li class="splide__slide">CONSISTENT</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-            <li class="splide__slide">INFINITE</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-            <li class="splide__slide">Exploration 75% in progress...</li>
-            <li class="splide__slide"><img src="./img/star_b.png" alt=""></li>
-        </ul>
-    </div>
     <section id="aboutme">
-        <div class="wrap">
-            <article class="on">
-                <div class="inner">
-                    <div class="pic"></div>
-                    <div class="txt">
-                        <h2>1</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        <div class="item"></div>
+        <div class="aboutme-wrap">
+            <div class="wrap">
+                <article class="on">
+                    <div class="inner">
+                        <div class="pic"></div>
+                        <div class="txt">
+                            <h2>I AM..</h2>
+                            <p>어릴 때부터 컴퓨터를 좋아했습니다. 게임은 일상, 포토샵은 취미, 복잡한 컴퓨터 부품들은 좋은 구경거리였죠. 자연스럽게 대학도 소프트웨어 쪽을 선택하게 되었습니다.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="inner">
-                    <div class="pic"></div>
-                    <div class="txt">
-                        <h2>2</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </article>
+                <article>
+                    <div class="inner">
+                        <div class="pic"></div>
+                        <div class="txt">
+                            <h2>I AM..</h2>
+                            <p>대학에서의 공부는 무척 즐거웠습니다. 무한하게 팽창하는 우주처럼, 우연히 찾아낸 행성이 큰 발견이 되는 것처럼. 우연하게 과제로 접하게 된 프론트엔드의 세계는 화려하고 새로웠습니다.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="inner">
-                    <div class="pic"></div>
-                    <div class="txt">
-                        <h2>3</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </article>
+                <article>
+                    <div class="inner">
+                        <div class="pic"></div>
+                        <div class="txt">
+                            <h2>I AM..</h2>
+                            <p>잠깐 스쳐지나간 빛에도 무수히 많은 꿈이 담겨있는 우주처럼.
+                                대학을 졸업하고 본격적으로 공부를 시작했습니다.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="inner">
-                    <div class="pic"></div>
-                    <div class="txt">
-                        <h2>4</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </article>
+                <article>
+                    <div class="inner">
+                        <div class="pic"></div>
+                        <div class="txt">
+                            <h2>I AM..</h2>
+                            <p>여전히 게임은 일상, 그림 그리는 것은 취미. 셀 수 없을 정도로 많은 사이트들은 좋은 구경거리입니다. 새로운 것을 보면 어떻게 구현했을까, 하고 의문이 먼저 들어요.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="inner">
-                    <div class="pic"></div>
-                    <div class="txt">
-                        <h2>5</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </article>
+                <article>
+                    <div class="inner">
+                        <div class="pic"></div>
+                        <div class="txt">
+                            <h2>I AM..</h2>
+                            <p>이 길은 종착점을 알 수 없는 우주를 여행하는 것 같습니다. 끝없이 넓어지는 우주처럼, 제 장점은 꾸준하고 성실하게 나아갈 수 있다는 점입니다. </p>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="inner">
-                    <div class="pic"></div>
-                    <div class="txt">
-                        <h2>6</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </article>
+                <article>
+                    <div class="inner">
+                        <div class="pic"></div>
+                        <div class="txt">
+                            <h2>Skill</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="inner">
-                    <div class="pic"></div>
-                    <div class="txt">
-                        <h2>7</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </article>
+                <article>
+                    <div class="inner">
+                        <div class="pic"></div>
+                        <div class="txt">
+                            <h2>7</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-            <article>
-                <div class="inner">
-                    <div class="pic"></div>
-                    <div class="txt">
-                        <h2>8</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                </article>
+                <article>
+                    <div class="inner">
+                        <div class="pic"></div>
+                        <div class="txt">
+                            <h2>8</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
+            <div class="btnPrev cur">
+                <span>PREV</span>
+            </div>
+            <div class="btnNext cur">
+                <span>NEXT</span>
+            </div>
+            <div class="moon">
+                <img src="./img/planet.png" alt="">
+            </div>
+            <div id="space-container"></div>
+            <div class="space-con">
+                <div id="space-container-top"></div>
+            </div>
         </div>
-
-        <div class="btnPrev">
-            <span>PREV</span>
-        </div>
-        <div class="btnNext">
-            <span>NEXT</span>
-        </div>
-        <div class="moon">
-            <img src="./img/moon.png" alt="">
-        </div>
-
-        <div id="space-container"></div>
-        <div id="space-container-top"></div>
     </section>
+    <div class="cursor"></div>
 
 
     <!-- script src -->
@@ -387,6 +360,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="./script/index.js"></script>
     <script src="./script/project.js"></script>

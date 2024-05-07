@@ -50,10 +50,26 @@ function setActive(link) {
     link.classList.add('on')
 }
 
+// window.addEventListener('scroll', function () {
+//     let scrollTop = window.scrollY;
+
+//     // 네비게이션 링크의 색상을 변경할 스크롤 위치 계산
+//     let sectionTops = [];
+//     document.querySelectorAll('section').forEach(section => {
+//         sectionTops.push(section.offsetTop);
+//     });
+
+//     // 현재 스크롤 위치와 섹션 위치를 비교하여 적절한 네비게이션 링크의 색상 변경
+//     let navLinks = document.querySelectorAll('nav ul li a');
+//     navLinks.forEach((navLink, index) => {
+//         let onColor = (scrollTop < sectionTops[0] || index !== 0) ? '#000' : '#fff';
+//         navLink.style.color = onColor;
+//     });
+// });
 
 // nav 아래로 내려가면 nav 숨기기
 const showNav = gsap.from('nav', {
-    yPercent: -200,
+    yPercent: -250,
     paused: true,
     duration: 0.2
 }).progress(1)
@@ -222,3 +238,58 @@ animate();
 
 
 $('.scene').load('/aboutme.html');
+
+
+$(function () {
+    $(".css3d-camera").on("mousemove", function (event) {
+        var mouseX = event.pageX;
+        var mouseY = event.pageY;
+
+        $(".css3d-space").css(
+            "transform",
+            "rotateX(" + -mouseY + "deg) rotateY(" + -mouseX + "deg)"
+        );
+    });
+
+    $(document).on("mousemove", function (event) {
+        var mouseX = event.pageX;
+        var mouseY = event.pageY;
+
+        $(".parallax_layer.p0").css(
+            "-webkit-transform",
+            "translate3d(" + mouseX / 20 + "px," + mouseY / 20 + "px, 0)"
+        );
+        $(".parallax_layer.p1").css(
+            "-webkit-transform",
+            "translate3d(" + mouseX / 10 + "px, " + mouseY / 10 + "px, 0)"
+        );
+        $(".parallax_layer.p2").css(
+            "-webkit-transform",
+            "translate3d(" + mouseX / 7 + "px," + mouseY / 7 + "px, 0)"
+        );
+        $(".parallax_layer.p3").css(
+            "-webkit-transform",
+            "translate3d(" + mouseX / 10 + "px," + mouseY / 10 + "px, 0)"
+        );
+    });
+});
+
+const $cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', function (e) {
+    $cursor.style.left = e.clientX + 'px';
+    $cursor.style.top = e.clientY + 'px';
+});
+
+$('a').mouseenter(function () {
+    $('.cursor').css({ 'transform': 'scale(5)' })
+})
+$('a').mouseleave(function () {
+    $('.cursor').css({ 'transform': 'scale(1)' })
+})
+
+$('.cur').mouseenter(function () {
+    $('.cursor').css({ 'transform': 'scale(5)' })
+})
+$('.cur').mouseleave(function () {
+    $('.cursor').css({ 'transform': 'scale(1)' })
+})

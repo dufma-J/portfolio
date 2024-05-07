@@ -10,7 +10,7 @@ html {
     width: 100%;
     overflow-x: hidden;
     position: relative;
-    background-color: var(--main-color);
+    background-color: var(--white100);
 
     .flex {
         display: flex;
@@ -24,12 +24,12 @@ html {
 section {
     width: 100%;
     height: 100vh;
-    background-color: var(--main-color);
-    overflow-x: hidden;
+    background-color: var(--white100);
 }
 
 #home {
     position: relative;
+    height: calc(100vh + 140px);
 
     nav {
         @media #{$phone} {
@@ -45,30 +45,28 @@ section {
         }
 
         position: fixed;
-        top: 30px;
+        top: 40px;
         left: 50%;
         transform: translatex(-50%);
-        border-radius: 30px;
-        border: 3px solid var(--black);
-        background-color: var(--point2-color);
-        z-index: 999;
+        z-index: 9999;
 
         ul {
             align-items: center;
             justify-content: center;
-            gap: 90px;
-            font-size: 22px;
+            gap: 50px;
+            font-size: 18px;
             padding: 0px 50px;
 
             li {
                 a {
-                    font-family: 'Dia_bold';
+                    color: #fff;
+                    font-family: 'Dia_light';
                     display: block;
                     padding: 5px;
                     transition: 0.35s;
 
                     &:hover {
-                        color: var(--point1-color);
+                        color: var(--point1-color) !important;
                         text-shadow: 1px 1px 5px #000;
                     }
 
@@ -164,32 +162,85 @@ section {
         }
     }
 
+    .parallax_camera {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh + 140px);
+        top: 0%;
+        left: 0%;
+        z-index: 11;
+        overflow: hidden;
+        perspective-origin: center center;
+        perspective: 500px;
+
+        .parallax_space {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            .parallax_layer {
+                position: absolute;
+                transition: transform 0.5s linear;
+
+                &.p0 {
+                    top: 40%;
+                    left: 60%;
+
+                    img {
+                        width: 650px;
+                        height: 650px;
+                    }
+
+                    &::after {
+                        content: '';
+                        width: 650px;
+                        height: 650px;
+                        border-radius: 9999px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: url(https://grainy-gradients.vercel.app/noise.svg);
+                        opacity: 60%;
+                        z-index: 80;
+                    }
+                }
+
+                &.p1 {
+                    top: 65%;
+                    left: 6%;
+
+                    img {
+                        width: 250px;
+                    }
+                }
+
+                &.p2 {
+                    top: -9%;
+                    left: 64%;
+
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
     .wrap {
         position: absolute;
-        margin: 0;
         width: 100%;
-
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        height: calc(100vh + 140px);
+        top: 0%;
+        left: 0%;
         color: var(--point2-color);
         display: flex;
         align-items: center;
         justify-content: center;
 
-        .cover {
-            width: 1300px;
-            height: 10px;
-            background-color: var(--main-color);
-            position: absolute;
-            z-index: 99;
-            top: 63%;
-        }
-
         .star {
             position: relative;
             width: 100%;
-            height: 900px;
+            height: 100%;
             overflow: hidden;
 
             .frame {
@@ -199,22 +250,12 @@ section {
                 height: 100%;
             }
 
-            .moon {
-                display: none;
-                position: absolute;
-                width: 95%;
-                z-index: 5;
-                top: 30%;
-                left: 0%;
-                animation: spanAni 90s linear infinite;
-            }
-
             canvas {
                 margin: 0;
                 padding: 0;
                 display: block;
                 width: 100%;
-                height: 99%;
+                height: 100%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -228,20 +269,24 @@ section {
             width: 100%;
             margin-bottom: 50px;
         }
+    }
 
-        .main-text {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    .main-text {
+        text-align: left;
+        position: absolute;
+        width: 40%;
+        height: 18%;
+        top: 43%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        color: #fff;
 
         h1 {
             display: inline;
             position: relative;
             font-family: 'Dia_bold';
-            font-size: 60px;
+            font-size: 70px;
             transition: 0.35s;
 
             &:hover {
@@ -250,7 +295,7 @@ section {
         }
 
         p {
-            font-size: 24px;
+            font-size: 28px;
             padding: 20px 0px 50px;
 
             span {
@@ -271,36 +316,22 @@ section {
             }
         }
     }
-}
 
-.field {
-    width: 50px;
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    transform: translateX(-50%);
-
-    .mouse {
-        width: 40px;
-        height: 72px;
-        border: 3px solid var(--point2-color);
-        border-radius: 60px;
-        position: relative;
-
-        &::before {
-            content: '';
-            width: 9px;
-            height: 9px;
-            position: absolute;
-            top: 8px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--point2-color);
-            border-radius: 50%;
-            opacity: 1;
-            animation: wheel 2s infinite;
-            -webkit-animation: wheel 2s infinite;
-        }
+    .cloud-bg {
+        position: absolute;
+        width: 100%;
+        height: 140px;
+        top: 100vh;
+        left: 50%;
+        z-index: 50;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-repeat: repeat-x;
+        background-position: top;
+        background-image: url(../img/Union.png);
+        -webkit-animation: cloud-ani 50s linear infinite;
+        animation: cloud-ani 50s linear infinite;
+        will-change: transform;
     }
 }
 
@@ -308,7 +339,6 @@ section {
     position: relative;
     justify-content: center;
     align-items: center;
-
 
     @media #{$phone} {
         display: flex;
@@ -342,8 +372,8 @@ section {
         }
 
         @media #{$desktop} {
-            top: 16%;
-            right: 37%;
+            top: 21%;
+            right: 35.2%;
             transform: translateX(0%);
         }
 
@@ -387,9 +417,8 @@ section {
         top: 50px;
         padding: 10px;
         transition: 0.5s;
-        border-radius: 30px;
         overflow: hidden;
-        color: var(--point2-color);
+        color: var(--black);
 
         &::before {
             content: '';
@@ -408,7 +437,7 @@ section {
             content: '';
             width: 100%;
             height: 100%;
-            background: var(--main-color);
+            background: var(--white100);
             position: absolute;
             left: 0;
             top: 0;
@@ -442,7 +471,6 @@ section {
             }
 
             font-family: 'Dia_bold';
-
         }
 
         a {
@@ -539,14 +567,13 @@ section {
                 }
 
                 display: none;
-                font-family: 'Dia_medium';
+                font-family: 'Dia_light';
 
                 &.on {
                     display: block;
                 }
 
                 span {
-                    color: var(--point1-color);
                     font-family: 'Dia_medium';
                 }
             }
@@ -600,13 +627,12 @@ section {
         }
 
         @media #{$desktop} {
-            width: 40%;
-            height: 60%;
+            width: 35%;
+            height: 50%;
         }
 
         position: relative;
         height: 60vh;
-        border-radius: 30px;
         overflow: hidden;
 
         &::before {
@@ -626,7 +652,7 @@ section {
             content: '';
             width: 100%;
             height: 100%;
-            background: var(--main-color);
+            background: var(--white100);
             position: absolute;
             left: 0;
             top: 0;
@@ -716,76 +742,6 @@ section {
     }
 }
 
-.wrap_wrap {
-    &.w2 {
-        @media #{$phone} {
-            top: 382vh;
-            left: -10%;
-        }
-
-        @media #{$tablet} {
-            top: 382vh;
-            left: -10%;
-        }
-
-        @media #{$desktop} {
-            top: 382vh;
-            left: -3%;
-        }
-
-        rotate: 4deg;
-        background-color: var(--white100);
-    }
-
-    &.w1 {
-        @media #{$phone} {
-            top: 245vh;
-            left: -10%;
-        }
-
-        @media #{$tablet} {
-            top: 265vh;
-            left: -10%;
-        }
-
-        @media #{$desktop} {
-            top: 195vh;
-            left: -3%;
-        }
-
-        rotate: -7.5deg;
-        background-color: var(--point1-color);
-    }
-
-    display: inline;
-    border: 3px solid #000;
-    width: 2200px;
-    border-radius: 99px;
-    overflow: hidden;
-    position: absolute;
-    transition: 0.5s;
-    z-index: 50;
-
-    .list {
-        display: flex;
-        gap: 20px;
-
-        li {
-            display: flex;
-            align-items: center;
-            padding: 10px 0px;
-            font-size: 54px;
-            font-family: 'Dia_bold';
-
-            img {
-                width: 30px;
-                height: 30px;
-                transition: 0.5s;
-            }
-        }
-    }
-}
-
 #work {
     position: relative;
     overflow: hidden;
@@ -801,7 +757,7 @@ section {
                 bottom: 10px;
                 transform: translateX(-50%);
                 font-size: 100px;
-                -webkit-text-stroke: 3px var(--point2-color);
+                -webkit-text-stroke: 3px var(--black);
             }
 
             @media #{$tablet} {
@@ -809,7 +765,7 @@ section {
                 bottom: 10px;
                 transform: translateX(-50%);
                 font-size: 100px;
-                -webkit-text-stroke: 3px var(--point2-color);
+                -webkit-text-stroke: 3px var(--black);
             }
 
             @media #{$desktop} {
@@ -817,7 +773,7 @@ section {
                 bottom: 0;
                 transform: translateX(0%);
                 font-size: 200px;
-                -webkit-text-stroke: 1px var(--point2-color);
+                -webkit-text-stroke: 2px var(--black);
             }
 
             font-family: 'Dia_bold';
@@ -843,7 +799,6 @@ section {
             position: absolute;
             left: 1.5%;
             bottom: 24%;
-            color: var(--point2-color);
 
             p {
                 display: none;
@@ -855,7 +810,7 @@ section {
                 span {
                     display: block;
                     padding: 20px 0;
-                    font-family: 'Dia_medium';
+                    font-family: 'Dia_bold';
                     color: var(--point1-color);
                 }
             }
@@ -1148,7 +1103,6 @@ section {
                     display: block;
                     width: 90%;
                     height: 90%;
-                    border-radius: 15px;
                     overflow: hidden;
                     transition: 0.35s;
                     background-position: center;
@@ -1217,10 +1171,18 @@ section {
 }
 
 #aboutme {
-    overflow: hidden;
     position: relative;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 75%);
+    height: auto;
+    background-color: #000;
+    // overflow-x: hidden;
+
+    .aboutme-wrap {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 9999;
+    }
 
     .wrap {
         width: 20vw;
@@ -1281,8 +1243,8 @@ section {
 
             &:nth-child(3) {
                 .inner {
-                    background: rgb(0,151,160);
-                    background: linear-gradient(54deg, rgba(0,151,160,1) 0%, rgba(229,208,187,1) 39%);
+                    background: rgb(0, 151, 160);
+                    background: linear-gradient(54deg, rgba(0, 151, 160, 1) 0%, rgba(229, 208, 187, 1) 39%);
 
                     &::after {
                         content: '';
@@ -1301,8 +1263,8 @@ section {
 
             &:nth-child(4) {
                 .inner {
-                    background: rgb(176,35,51);
-                    background: linear-gradient(163deg, rgba(176,35,51,1) 0%, rgba(254,210,203,1) 49%);
+                    background: rgb(176, 35, 51);
+                    background: linear-gradient(163deg, rgba(176, 35, 51, 1) 0%, rgba(254, 210, 203, 1) 49%);
 
                     &::after {
                         content: '';
@@ -1321,8 +1283,8 @@ section {
 
             &:nth-child(5) {
                 .inner {
-                    background: rgb(29,69,58);
-                    background: linear-gradient(240deg, rgba(29,69,58,1) 15%, rgba(252,239,204,1) 49%);
+                    background: rgb(29, 69, 58);
+                    background: linear-gradient(240deg, rgba(29, 69, 58, 1) 15%, rgba(252, 239, 204, 1) 49%);
 
                     &::after {
                         content: '';
@@ -1361,8 +1323,8 @@ section {
 
             &:nth-child(7) {
                 .inner {
-                    background: rgb(229,248,252);
-                    background: radial-gradient(circle, rgba(229,248,252,1) 33%, rgba(178,126,246,1) 100%);
+                    background: rgb(229, 248, 252);
+                    background: radial-gradient(circle, rgba(229, 248, 252, 1) 33%, rgba(178, 126, 246, 1) 100%);
 
                     &::after {
                         content: '';
@@ -1381,8 +1343,8 @@ section {
 
             &:nth-child(8) {
                 .inner {
-                    background: rgb(232,233,227);
-                    background: radial-gradient(circle, rgba(232,233,227,1) 40%, rgba(3,100,211,1) 100%);
+                    background: rgb(232, 233, 227);
+                    background: radial-gradient(circle, rgba(232, 233, 227, 1) 40%, rgba(3, 100, 211, 1) 100%);
 
                     &::after {
                         content: '';
@@ -1481,6 +1443,7 @@ section {
                         font-family: 'Dia_light';
                         font-size: 18px;
                         color: #777;
+                        margin-top: 20px;
                     }
                 }
             }
@@ -1591,6 +1554,20 @@ section {
             transition: 1s;
             z-index: 50;
         }
+
+        &::after {
+            content: '';
+            width: 40%;
+            height: 80%;
+            border-radius: 9999px;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+            background: url(https://grainy-gradients.vercel.app/noise.svg);
+            opacity: 60%;
+            z-index: 50;
+        }
     }
 
     #space-container-top {
@@ -1604,6 +1581,35 @@ section {
     }
 }
 
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.35s;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.item {
+    position: absolute;
+    width: 100%;
+    height: 100vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 999px;
+    z-index: 10;
+    top: -1%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.space-con{
+    height: 100vh;
+    overflow: hidden !important;
+}
 
 @keyframes ani {
     0% {
@@ -1649,6 +1655,16 @@ section {
     to {
         opacity: 0;
         top: 48px;
+    }
+}
+
+@keyframes cloud-ani {
+    0% {
+        background-position: top 0;
+    }
+
+    100% {
+        background-position: top left 5000px;
     }
 }
 

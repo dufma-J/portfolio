@@ -5,7 +5,7 @@ html {
   width: 100%;
   overflow-x: hidden;
   position: relative;
-  background-color: var(--main-color);
+  background-color: var(--white100);
 }
 body .flex,
 html .flex {
@@ -19,22 +19,19 @@ html * {
 section {
   width: 100%;
   height: 100vh;
-  background-color: var(--main-color);
-  overflow-x: hidden;
+  background-color: var(--white100);
 }
 
 #home {
   position: relative;
+  height: calc(100vh + 140px);
 }
 #home nav {
   position: fixed;
-  top: 30px;
+  top: 40px;
   left: 50%;
   transform: translatex(-50%);
-  border-radius: 30px;
-  border: 3px solid var(--black);
-  background-color: var(--point2-color);
-  z-index: 999;
+  z-index: 9999;
 }
 @media only screen and (max-width : 819px) {
   #home nav {
@@ -54,18 +51,19 @@ section {
 #home nav ul {
   align-items: center;
   justify-content: center;
-  gap: 90px;
-  font-size: 22px;
+  gap: 50px;
+  font-size: 18px;
   padding: 0px 50px;
 }
 #home nav ul li a {
-  font-family: "Dia_bold";
+  color: #fff;
+  font-family: "Dia_light";
   display: block;
   padding: 5px;
   transition: 0.35s;
 }
 #home nav ul li a:hover {
-  color: var(--point1-color);
+  color: var(--point1-color) !important;
   text-shadow: 1px 1px 5px #000;
 }
 #home nav ul li a.on {
@@ -140,30 +138,75 @@ section {
 #home .mobile-menu .menu ul li a {
   display: block;
 }
+#home .parallax_camera {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh + 140px);
+  top: 0%;
+  left: 0%;
+  z-index: 11;
+  overflow: hidden;
+  perspective-origin: center center;
+  perspective: 500px;
+}
+#home .parallax_camera .parallax_space {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#home .parallax_camera .parallax_space .parallax_layer {
+  position: absolute;
+  transition: transform 0.5s linear;
+}
+#home .parallax_camera .parallax_space .parallax_layer.p0 {
+  top: 40%;
+  left: 60%;
+}
+#home .parallax_camera .parallax_space .parallax_layer.p0 img {
+  width: 650px;
+  height: 650px;
+}
+#home .parallax_camera .parallax_space .parallax_layer.p0::after {
+  content: "";
+  width: 650px;
+  height: 650px;
+  border-radius: 9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(https://grainy-gradients.vercel.app/noise.svg);
+  opacity: 60%;
+  z-index: 80;
+}
+#home .parallax_camera .parallax_space .parallax_layer.p1 {
+  top: 65%;
+  left: 6%;
+}
+#home .parallax_camera .parallax_space .parallax_layer.p1 img {
+  width: 250px;
+}
+#home .parallax_camera .parallax_space .parallax_layer.p2 {
+  top: -9%;
+  left: 64%;
+}
+#home .parallax_camera .parallax_space .parallax_layer.p2 img {
+  width: 200px;
+}
 #home .wrap {
   position: absolute;
-  margin: 0;
   width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: calc(100vh + 140px);
+  top: 0%;
+  left: 0%;
   color: var(--point2-color);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#home .wrap .cover {
-  width: 1300px;
-  height: 10px;
-  background-color: var(--main-color);
-  position: absolute;
-  z-index: 99;
-  top: 63%;
-}
 #home .wrap .star {
   position: relative;
   width: 100%;
-  height: 900px;
+  height: 100%;
   overflow: hidden;
 }
 #home .wrap .star .frame {
@@ -172,21 +215,12 @@ section {
   width: 100%;
   height: 100%;
 }
-#home .wrap .star .moon {
-  display: none;
-  position: absolute;
-  width: 95%;
-  z-index: 5;
-  top: 30%;
-  left: 0%;
-  animation: spanAni 90s linear infinite;
-}
 #home .wrap .star canvas {
   margin: 0;
   padding: 0;
   display: block;
   width: 100%;
-  height: 99%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -198,69 +232,58 @@ section {
   width: 100%;
   margin-bottom: 50px;
 }
-#home .wrap .main-text {
-  text-align: center;
+#home .main-text {
+  text-align: left;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 40%;
+  height: 18%;
+  top: 43%;
+  left: 30%;
   transform: translate(-50%, -50%);
+  z-index: 9999;
+  color: #fff;
 }
-#home .wrap h1 {
+#home .main-text h1 {
   display: inline;
   position: relative;
   font-family: "Dia_bold";
-  font-size: 60px;
+  font-size: 70px;
   transition: 0.35s;
 }
-#home .wrap h1:hover {
+#home .main-text h1:hover {
   color: var(--point1-color);
 }
-#home .wrap p {
-  font-size: 24px;
+#home .main-text p {
+  font-size: 28px;
   padding: 20px 0px 50px;
 }
-#home .wrap p span {
+#home .main-text p span {
   color: var(--point1-color);
 }
-#home .wrap .a-text {
+#home .main-text .a-text {
   padding: 5px 10px;
   font-size: 24px;
   border-radius: 30px;
   transition: 0.5s;
   font-family: "Dia_bold";
 }
-#home .wrap .a-text:hover {
+#home .main-text .a-text:hover {
   background-color: var(--point1-color);
   color: var(--black);
 }
-
-.field {
-  width: 50px;
+#home .cloud-bg {
   position: absolute;
+  width: 100%;
+  height: 140px;
+  top: 100vh;
   left: 50%;
-  bottom: 10%;
+  z-index: 50;
   transform: translateX(-50%);
-}
-.field .mouse {
-  width: 40px;
-  height: 72px;
-  border: 3px solid var(--point2-color);
-  border-radius: 60px;
-  position: relative;
-}
-.field .mouse::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--point2-color);
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 2s infinite;
-  -webkit-animation: wheel 2s infinite;
+  background-repeat: repeat-x;
+  background-position: top;
+  background-image: url(../img/Union.png);
+  animation: cloud-ani 50s linear infinite;
+  will-change: transform;
 }
 
 #project {
@@ -310,8 +333,8 @@ section {
 }
 @media screen and (min-width : 1200px) {
   #project .nav {
-    top: 16%;
-    right: 37%;
+    top: 21%;
+    right: 35.2%;
     transform: translateX(0%);
   }
 }
@@ -331,9 +354,8 @@ section {
   top: 50px;
   padding: 10px;
   transition: 0.5s;
-  border-radius: 30px;
   overflow: hidden;
-  color: var(--point2-color);
+  color: var(--black);
 }
 @media only screen and (max-width : 819px) {
   #project .text {
@@ -369,7 +391,7 @@ section {
   content: "";
   width: 100%;
   height: 100%;
-  background: var(--main-color);
+  background: var(--white100);
   position: absolute;
   left: 0;
   top: 0;
@@ -494,7 +516,7 @@ section {
 }
 #project .text .project_coment li {
   display: none;
-  font-family: "Dia_medium";
+  font-family: "Dia_light";
 }
 @media only screen and (max-width : 819px) {
   #project .text .project_coment li {
@@ -515,7 +537,6 @@ section {
   display: block;
 }
 #project .text .project_coment li span {
-  color: var(--point1-color);
   font-family: "Dia_medium";
 }
 #project .text .project_num {
@@ -554,7 +575,6 @@ section {
 #project .img {
   position: relative;
   height: 60vh;
-  border-radius: 30px;
   overflow: hidden;
 }
 @media only screen and (max-width : 819px) {
@@ -571,8 +591,8 @@ section {
 }
 @media screen and (min-width : 1200px) {
   #project .img {
-    width: 40%;
-    height: 60%;
+    width: 35%;
+    height: 50%;
   }
 }
 #project .img::before {
@@ -591,7 +611,7 @@ section {
   content: "";
   width: 100%;
   height: 100%;
-  background: var(--main-color);
+  background: var(--white100);
   position: absolute;
   left: 0;
   top: 0;
@@ -670,77 +690,6 @@ section {
   height: 30px;
 }
 
-.wrap_wrap {
-  display: inline;
-  border: 3px solid #000;
-  width: 2200px;
-  border-radius: 99px;
-  overflow: hidden;
-  position: absolute;
-  transition: 0.5s;
-  z-index: 50;
-}
-.wrap_wrap.w2 {
-  rotate: 4deg;
-  background-color: var(--white100);
-}
-@media only screen and (max-width : 819px) {
-  .wrap_wrap.w2 {
-    top: 382vh;
-    left: -10%;
-  }
-}
-@media only screen and (min-width : 820px) {
-  .wrap_wrap.w2 {
-    top: 382vh;
-    left: -10%;
-  }
-}
-@media screen and (min-width : 1200px) {
-  .wrap_wrap.w2 {
-    top: 382vh;
-    left: -3%;
-  }
-}
-.wrap_wrap.w1 {
-  rotate: -7.5deg;
-  background-color: var(--point1-color);
-}
-@media only screen and (max-width : 819px) {
-  .wrap_wrap.w1 {
-    top: 245vh;
-    left: -10%;
-  }
-}
-@media only screen and (min-width : 820px) {
-  .wrap_wrap.w1 {
-    top: 265vh;
-    left: -10%;
-  }
-}
-@media screen and (min-width : 1200px) {
-  .wrap_wrap.w1 {
-    top: 195vh;
-    left: -3%;
-  }
-}
-.wrap_wrap .list {
-  display: flex;
-  gap: 20px;
-}
-.wrap_wrap .list li {
-  display: flex;
-  align-items: center;
-  padding: 10px 0px;
-  font-size: 54px;
-  font-family: "Dia_bold";
-}
-.wrap_wrap .list li img {
-  width: 30px;
-  height: 30px;
-  transition: 0.5s;
-}
-
 #work {
   position: relative;
   overflow: hidden;
@@ -762,7 +711,7 @@ section {
     bottom: 10px;
     transform: translateX(-50%);
     font-size: 100px;
-    -webkit-text-stroke: 3px var(--point2-color);
+    -webkit-text-stroke: 3px var(--black);
   }
 }
 @media only screen and (min-width : 820px) {
@@ -771,7 +720,7 @@ section {
     bottom: 10px;
     transform: translateX(-50%);
     font-size: 100px;
-    -webkit-text-stroke: 3px var(--point2-color);
+    -webkit-text-stroke: 3px var(--black);
   }
 }
 @media screen and (min-width : 1200px) {
@@ -780,7 +729,7 @@ section {
     bottom: 0;
     transform: translateX(0%);
     font-size: 200px;
-    -webkit-text-stroke: 1px var(--point2-color);
+    -webkit-text-stroke: 2px var(--black);
   }
 }
 #work .work-inner .coment {
@@ -788,7 +737,6 @@ section {
   position: absolute;
   left: 1.5%;
   bottom: 24%;
-  color: var(--point2-color);
 }
 @media only screen and (max-width : 819px) {
   #work .work-inner .coment {
@@ -815,7 +763,7 @@ section {
 #work .work-inner .coment p span {
   display: block;
   padding: 20px 0;
-  font-family: "Dia_medium";
+  font-family: "Dia_bold";
   color: var(--point1-color);
 }
 #work .work-inner ul {
@@ -1037,7 +985,6 @@ section {
   display: block;
   width: 90%;
   height: 90%;
-  border-radius: 15px;
   overflow: hidden;
   transition: 0.35s;
   background-position: center;
@@ -1087,10 +1034,16 @@ section {
 }
 
 #aboutme {
-  overflow: hidden;
   position: relative;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 75%);
+  height: auto;
+  background-color: #000;
+}
+#aboutme .aboutme-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
 }
 #aboutme .wrap {
   width: 20vw;
@@ -1307,6 +1260,7 @@ section {
   font-family: "Dia_light";
   font-size: 18px;
   color: #777;
+  margin-top: 20px;
 }
 #aboutme .btnPrev {
   width: 120px;
@@ -1397,6 +1351,19 @@ section {
   transition: 1s;
   z-index: 50;
 }
+#aboutme .moon::after {
+  content: "";
+  width: 40%;
+  height: 80%;
+  border-radius: 9999px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  background: url(https://grainy-gradients.vercel.app/noise.svg);
+  opacity: 60%;
+  z-index: 50;
+}
 #aboutme #space-container-top {
   opacity: 1;
   position: absolute;
@@ -1405,6 +1372,36 @@ section {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.35s;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.item {
+  position: absolute;
+  width: 100%;
+  height: 100vw;
+  background-color: rgb(0, 0, 0);
+  border-radius: 999px;
+  z-index: 10;
+  top: -1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.space-con {
+  height: 100vh;
+  overflow: hidden !important;
 }
 
 @keyframes ani {
@@ -1443,5 +1440,13 @@ section {
   to {
     opacity: 0;
     top: 48px;
+  }
+}
+@keyframes cloud-ani {
+  0% {
+    background-position: top 0;
+  }
+  100% {
+    background-position: top left 5000px;
   }
 }
