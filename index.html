@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css' />
 </head>
 
 <body class="on">
-    <section id="home">
+    <section id="home" data-TextColor="#fff" data-Bgcolor="#f2f2f2">
         <nav>
             <ul class="flex">
                 <li><a href="#home" class="on">HOME</a></li>
@@ -56,7 +57,7 @@
         </div>
         <div class="cloud-bg"></div>
     </section>
-    <section id="project">
+    <section id="project" data-TextColor="#000" data-Bgcolor="#f2f2f2">
         <ul class="nav">
             <li><a href="#" class="on" data-text="Get goal">01</a></li>
             <li><a href="#" data-text="여기어때">02</a></li>
@@ -105,7 +106,7 @@
             </div>
         </div>
     </section>
-    <section id="work">
+    <section id="work" data-TextColor="#fff" data-Bgcolor="#272727">
         <div class="work-inner">
             <h2>WORK</h2>
             <div class="coment">
@@ -232,25 +233,27 @@
             </ul>
         </div>
     </section>
-    <section id="graphic">
+    <section id="graphic" data-TextColor="#000" data-Bgcolor="#f2f2f2">
         <h2 class="cur">GRAPHICS</h2>
-        <div class="splide rtl">
-            <div class="splide__track splide__track-2">
-                <ul class="splide__list">
-                    <li class="splide__slide"><img src="./img/gr1.png" alt=""></li>
-                    <li class="splide__slide"><img src="./img/gr2.png" alt=""></li>
-                    <li class="splide__slide"><img src="./img/gr3.png" alt=""></li>
-                    <li class="splide__slide"><img src="./img/gr1.png" alt=""></li>
-                    <li class="splide__slide"><img src="./img/gr2.png" alt=""></li>
-                    <li class="splide__slide"><img src="./img/gr3.png" alt=""></li>
-                    <li class="splide__slide"><img src="./img/gr1.png" alt=""></li>
-                    <li class="splide__slide"><img src="./img/gr2.png" alt=""></li>
-                    <li class="splide__slide"><img src="./img/gr3.png" alt=""></li>
-                </ul>
-            </div>
+        <div class="graphic_track">
+            <ul class="graphic_list">
+                <li><a href="./img/gr1.png" data-fancybox="gallery"><img src="./img/gr1.png" alt=""></a></li>
+                <li><a href="./img/gr2.png" data-fancybox="gallery"><img src="./img/gr2.png" alt=""></a></li>
+                <li><a href="./img/gr3.png" data-fancybox="gallery"><img src="./img/gr3.png" alt=""></a></li>
+                <li><a href="./img/g1.png" data-fancybox="gallery"><img src="./img/g1.png" alt=""></a></li>
+                <li><a href="./img/g1.png" data-fancybox="gallery"><img src="./img/g1.png" alt=""></a></li>
+                <li class="etc"><a href="./img/gr1.png" data-fancybox="gallery"><img src="./img/gr1.png" alt=""></a>
+                </li>
+                <li class="etc"><a href="./img/gr2.png" data-fancybox="gallery"><img src="./img/gr2.png" alt=""></a>
+                </li>
+                <li class="etc"><a href="./img/gr3.png" data-fancybox="gallery"><img src="./img/gr3.png" alt=""></a>
+                </li>
+                <li class="etc"><a href="./img/g1.png" data-fancybox="gallery"><img src="./img/g1.png" alt=""></a></li>
+                <li class="etc"><a href="./img/g1.png" data-fancybox="gallery"><img src="./img/g1.png" alt=""></a></li>
+            </ul>
         </div>
     </section>
-    <section id="aboutme">
+    <section id="aboutme" data-TextColor="#fff" data-Bgcolor="#f2f2f2">
         <div class="item"></div>
         <div class="aboutme-wrap">
             <div class="wrap">
@@ -259,7 +262,8 @@
                         <div class="pic"></div>
                         <div class="txt">
                             <h2>I AM..</h2>
-                            <p>어릴 때부터 컴퓨터를 좋아했습니다. 게임은 일상, 포토샵은 취미, 복잡한 컴퓨터 부품들은 좋은 구경거리였죠. 자연스럽게 대학도 소프트웨어 쪽을 선택하게 되었습니다.</p>
+                            <p>어릴 때부터 컴퓨터를 좋아했습니다. 게임은 일상, 포토샵은 취미, 복잡한 컴퓨터 부품들은 좋은 구경거리였죠. 자연스럽게 대학도 소프트웨어 쪽을 선택하게
+                                되었습니다.</p>
                         </div>
                     </div>
                 </article>
@@ -268,7 +272,8 @@
                         <div class="pic"></div>
                         <div class="txt">
                             <h2>I AM..</h2>
-                            <p>대학에서의 공부는 무척 즐거웠습니다. 무한하게 팽창하는 우주처럼, 우연히 찾아낸 행성이 큰 발견이 되는 것처럼. 우연하게 과제로 접하게 된 프론트엔드의 세계는 화려하고 새로웠습니다.</p>
+                            <p>대학에서의 공부는 무척 즐거웠습니다. 무한하게 팽창하는 우주처럼, 우연히 찾아낸 행성이 큰 발견이 되는 것처럼. 우연하게 과제로 접하게 된 프론트엔드의 세계는
+                                화려하고 새로웠습니다.</p>
                         </div>
                     </div>
                 </article>
@@ -287,7 +292,8 @@
                         <div class="pic"></div>
                         <div class="txt">
                             <h2>I AM..</h2>
-                            <p>여전히 게임은 일상, 그림 그리는 것은 취미. 셀 수 없을 정도로 많은 사이트들은 좋은 구경거리입니다. 새로운 것을 보면 어떻게 구현했을까, 하고 의문이 먼저 들어요.</p>
+                            <p>여전히 게임은 일상, 그림 그리는 것은 취미. 셀 수 없을 정도로 많은 사이트들은 좋은 구경거리입니다. 새로운 것을 보면 어떻게 구현했을까, 하고 의문이 먼저
+                                들어요.</p>
                         </div>
                     </div>
                 </article>
@@ -346,6 +352,7 @@
     <div class="cursor"></div>
 
 
+
     <!-- script src -->
     <script src="./script/jquery-3.7.1.min.js"></script>
 
@@ -361,6 +368,8 @@
     <script
         src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js'></script>
 
     <script src="./script/index.js"></script>
     <script src="./script/project.js"></script>

@@ -50,22 +50,46 @@ function setActive(link) {
     link.classList.add('on')
 }
 
-// window.addEventListener('scroll', function () {
-//     let scrollTop = window.scrollY;
+gsap.utils.toArray('section').forEach(item => {
+    let textColor = item.getAttribute('data-TextColor');
 
-//     // 네비게이션 링크의 색상을 변경할 스크롤 위치 계산
-//     let sectionTops = [];
-//     document.querySelectorAll('section').forEach(section => {
-//         sectionTops.push(section.offsetTop);
-//     });
+    ScrollTrigger.create({
+        trigger: item,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => {
+            gsap.to("nav ul li a", {
+                color: textColor,
+            });
+        },
+        onEnterBack: () => {
+            gsap.to("nav ul li a", {
+                color: textColor,
+            });
+        },
+    });
+});
 
-//     // 현재 스크롤 위치와 섹션 위치를 비교하여 적절한 네비게이션 링크의 색상 변경
-//     let navLinks = document.querySelectorAll('nav ul li a');
-//     navLinks.forEach((navLink, index) => {
-//         let onColor = (scrollTop < sectionTops[0] || index !== 0) ? '#000' : '#fff';
-//         navLink.style.color = onColor;
-//     });
-// });
+gsap.utils.toArray('section').forEach(item => {
+    let bgColor = item.getAttribute('data-BgColor');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => {
+            gsap.to("section", {
+                backgroundColor: bgColor,
+            });
+        },
+        onEnterBack: () => {
+            gsap.to("section", {
+                backgroundColor: bgColor,
+            });
+        },
+    });
+});
+
 
 // nav 아래로 내려가면 nav 숨기기
 const showNav = gsap.from('nav', {
@@ -120,52 +144,7 @@ function Banner() {
 setInterval(Banner, 10)
 
 
-
-const carouselElementsLtl = document.querySelectorAll(".ltl");
-const carouselElementsrtl = document.querySelectorAll(".rtl");
-
-// 각 캐러셀 요소를 반복합니다.
-carouselElementsLtl.forEach((carouselElement) => {
-    // 각 캐러셀에 대해 새 슬라이드 인스턴스를 초기화합니다.
-    const splide = new Splide(carouselElement, {
-
-        type: "loop",
-        drag: true,
-        autoWidth: true,
-        gap: 30,
-        pagination: false,
-        arrows: false,
-        autoScroll: {
-            speed: 1,
-            pauseOnHover: false,
-        },
-    });
-
-    // 스플릿 인스턴스 마운트
-    splide.mount(window.splide.Extensions);
-});
-carouselElementsrtl.forEach((carouselElement) => {
-    // 각 캐러셀에 대해 새 슬라이드 인스턴스를 초기화합니다.
-    const splide = new Splide(carouselElement, {
-        direction: 'rtl',
-        type: "loop",
-        drag: true,
-        autoWidth: true,
-        gap: 30,
-        pagination: false,
-        arrows: false,
-        autoScroll: {
-            speed: 3,
-            pauseOnHover: true,
-        },
-    });
-
-    // 스플릿 인스턴스 마운트
-    splide.mount(window.splide.Extensions);
-});
-
-
-
+//home 페이지 별 반짝거리기
 const canvas = document.getElementById('starCanvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -237,9 +216,7 @@ init();
 animate();
 
 
-$('.scene').load('/aboutme.html');
-
-
+//home 페이지 마우스의 위치에 따라 요소 움직이기
 $(function () {
     $(".css3d-camera").on("mousemove", function (event) {
         var mouseX = event.pageX;
@@ -274,6 +251,8 @@ $(function () {
     });
 });
 
+
+//마우스 커서
 const $cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', function (e) {
     $cursor.style.left = e.clientX + 'px';

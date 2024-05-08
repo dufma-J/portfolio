@@ -5,7 +5,7 @@ html {
   width: 100%;
   overflow-x: hidden;
   position: relative;
-  background-color: var(--white100);
+  background-color: #f2f2f2;
 }
 body .flex,
 html .flex {
@@ -64,11 +64,9 @@ section {
 }
 #home nav ul li a:hover {
   color: var(--point1-color) !important;
-  text-shadow: 1px 1px 5px #000;
 }
 #home nav ul li a.on {
-  color: var(--point1-color);
-  text-shadow: 1px 1px 5px #000;
+  font-family: "Dia_bold";
 }
 #home nav ul img {
   width: 50px;
@@ -711,7 +709,7 @@ section {
     bottom: 10px;
     transform: translateX(-50%);
     font-size: 100px;
-    -webkit-text-stroke: 3px var(--black);
+    -webkit-text-stroke: 3px var(--white100);
   }
 }
 @media only screen and (min-width : 820px) {
@@ -720,7 +718,7 @@ section {
     bottom: 10px;
     transform: translateX(-50%);
     font-size: 100px;
-    -webkit-text-stroke: 3px var(--black);
+    -webkit-text-stroke: 3px var(--white100);
   }
 }
 @media screen and (min-width : 1200px) {
@@ -729,7 +727,7 @@ section {
     bottom: 0;
     transform: translateX(0%);
     font-size: 200px;
-    -webkit-text-stroke: 2px var(--black);
+    -webkit-text-stroke: 1px var(--white100);
   }
 }
 #work .work-inner .coment {
@@ -759,6 +757,7 @@ section {
   height: 240px;
   font-size: 24px;
   font-family: "Dia_light";
+  color: var(--white100);
 }
 #work .work-inner .coment p span {
   display: block;
@@ -1007,36 +1006,45 @@ section {
   font-size: 90px;
   font-family: "Dia_bold";
   color: var(--point2-color);
-  top: 15.5%;
+  top: 17.5%;
   right: 1%;
   z-index: 50;
-  rotate: -2deg;
   letter-spacing: -5px;
   -webkit-text-stroke: 2px black;
 }
-#graphic .splide {
+#graphic .graphic_track {
+  width: 100%;
+  height: 100%;
   position: relative;
-  width: 110%;
+  display: block;
+}
+#graphic .graphic_track ul {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-#graphic .splide .splide__track ul li img {
-  height: 380px;
-}
-#graphic .splide .splide__track-2 {
   padding: 50px 0px;
-  background-color: var(--point1-color);
-  rotate: -2deg;
 }
-#graphic .splide .splide__track-2 ul li {
-  color: black;
+#graphic .graphic_track ul li a {
+  margin: 0px 30px;
+}
+#graphic .graphic_track ul li a:hover img {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+#graphic .graphic_track ul li a img {
+  width: 400px;
+  -webkit-clip-path: circle(30%);
+          clip-path: circle(30%);
+  transition: 0.5s;
 }
 
 #aboutme {
   position: relative;
   height: auto;
-  background-color: #000;
+  background-color: #000 !important;
 }
 #aboutme .aboutme-wrap {
   position: relative;
@@ -1261,6 +1269,7 @@ section {
   font-size: 18px;
   color: #777;
   margin-top: 20px;
+  line-height: 28px;
 }
 #aboutme .btnPrev {
   width: 120px;
