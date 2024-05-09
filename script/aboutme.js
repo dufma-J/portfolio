@@ -1,13 +1,14 @@
 const ani1 = gsap.timeline()
-ani1.from('.item', { scale: 0 }, 'text')
+ani1.from('.item', { opacity: 0 })
 ScrollTrigger.create({
     animation: ani1,
-    trigger: '#aboutme',
-    start: 'top bottom',
+    trigger: '#graphic',
+    start: 'bottom bottom',
     scrub: true,
-    pin: true, 
+    pin: true,
     anticipatePin: 1
 })
+
 
 const frame = document.querySelector("#aboutme .wrap");
 const lists = frame.querySelectorAll("#aboutme article");
