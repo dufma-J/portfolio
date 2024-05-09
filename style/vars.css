@@ -1,9 +1,10 @@
 :root {
     --main-color: #272727;
-    --point1-color: #C3FD2D;
+    --point1-color: #049DBF;
     --point2-color: #CCCCCA;
-    --white100: #ffffff;
+    --white100: #f2f2f2;
     --white200: #f8f8f8;
-    --gray:#9b9b9b;
+    --gray: #9b9b9b;
     --black: #000000;
+    --about-color: #03658C;
 }
