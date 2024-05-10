@@ -83,27 +83,25 @@ $('#work ul.list2').mouseleave(function () { speed = 1 })
 
 $('#work ul li').mouseenter(function () {
     let text = $(this).find('a').attr('data-text');
-    let bgColor = $(this).find('a').attr('data-bgcolor');
-    let color = $(this).find('a').attr('data-color');
+    let media = $(this).find('a').attr('data-media');
 
     $('#work .coment p').each(function () {
-        let find = $(this).attr('data-find');
-        if (text === find) {
+        let find1 = $(this).attr('data-find');
+        if (text === find1) {
             $(this).css('display', 'block');
         }
     });
+    $('#work .media li').each(function () {
+        let find2 = $(this).attr('data-media');
+        if (media === find2) {
+            $(this).addClass('on');
+        }
+    });    
 
-    $('.wrap_wrap.w1').css('background-color', bgColor);
-    $('.wrap_wrap.w1').css('color', color);
     $('#work h2').text(text);
 
-    if (color === '#ffffff') {
-        $('.wrap_wrap.w1 .list li img').css('filter', 'invert(100%)');
-    }
 }).mouseleave(function () {
     $('#work h2').text('WORK');
     $('#work .coment p').css('display', 'none');
-    $('.wrap_wrap.w1').css('background-color', 'var(--point1-color)');
-    $('.wrap_wrap.w1').css('color', '#000000');
-    $('.wrap_wrap .list li img').css('filter', 'none');
+    $('#work .media ul li').removeClass('on')
 });

@@ -702,6 +702,28 @@ section {
   font-family: "Dia_bold";
   color: var(--point1-color);
 }
+#work .work-inner .media {
+  position: absolute;
+  left: 1.5%;
+  top: 43%;
+}
+#work .work-inner .media ul {
+  display: flex;
+  gap: 20px;
+}
+#work .work-inner .media ul li {
+  display: none;
+  height: 70px;
+  gap: 10px;
+  transition: 0.5s;
+}
+#work .work-inner .media ul li.on {
+  display: flex;
+}
+#work .work-inner .media ul li img {
+  width: 70px;
+  height: 70px;
+}
 #work .work-inner ul {
   position: absolute;
 }
@@ -894,6 +916,14 @@ section {
 }
 #work .work-inner ul.list2 li.item18 a:hover {
   background: url(../img/work18-2.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item19 a {
+  background: url(../img/work19-1.png);
+  background-size: cover;
+}
+#work .work-inner ul.list2 li.item19 a:hover {
+  background: url(../img/work19-2.png);
   background-size: cover;
 }
 #work .work-inner ul li {

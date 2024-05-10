@@ -764,6 +764,33 @@ section {
             }
         }
 
+        .media {
+            position: absolute;
+            left: 1.5%;
+            top: 43%;
+
+            ul {
+                display: flex;
+                gap: 20px;
+
+                li {
+                    display: none;
+                    height: 70px;
+                    gap: 10px;
+                    transition: 0.5s;
+
+                    &.on {
+                        display: flex;
+                    }
+
+                    img {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+            }
+        }
+
         ul {
             @media #{$phone} {
                 display: flex;
@@ -1022,6 +1049,18 @@ section {
 
                             &:hover {
                                 background: url(../img/work18-2.png);
+                                background-size: cover;
+                            }
+                        }
+                    }
+
+                    &.item19 {
+                        a {
+                            background: url(../img/work19-1.png);
+                            background-size: cover;
+
+                            &:hover {
+                                background: url(../img/work19-2.png);
                                 background-size: cover;
                             }
                         }
