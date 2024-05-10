@@ -17,6 +17,4 @@ for (let el of article) {
 }
 
 
-Fancybox.bind("[data-fancybox]", {
-    // Your custom options
-});
+Fancybox.bind("[data-fancybox]", {});

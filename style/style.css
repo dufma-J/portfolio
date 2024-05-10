@@ -33,7 +33,7 @@ section {
   top: 40px;
   left: 50%;
   transform: translatex(-50%);
-  z-index: 9999;
+  z-index: 999;
 }
 @media only screen and (max-width : 819px) {
   #home nav {
@@ -413,76 +413,10 @@ section {
     font-size: 80px;
   }
 }
-#project .text a {
-  border: 3px solid #000;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--point2-color);
-  color: var(--white100);
-  border-radius: 99px;
-  padding: 10px 30px;
-  gap: 10px;
-}
-@media only screen and (max-width : 819px) {
-  #project .text a {
-    margin-top: 30px;
-  }
-}
-@media only screen and (min-width : 820px) {
-  #project .text a {
-    margin-top: 30px;
-  }
-}
-@media screen and (min-width : 1200px) {
-  #project .text a {
-    margin-top: 100px;
-  }
-}
-#project .text a p {
-  font-family: "Dia_bold";
-  color: var(--black);
-}
-@media only screen and (max-width : 819px) {
-  #project .text a p {
-    font-size: 20px;
-  }
-}
-@media only screen and (min-width : 820px) {
-  #project .text a p {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width : 1200px) {
-  #project .text a p {
-    font-size: 30px;
-  }
-}
-#project .text a img {
-  animation: spanAni 8s infinite linear;
-}
-@media only screen and (max-width : 819px) {
-  #project .text a img {
-    width: 20px;
-    height: 20px;
-  }
-}
-@media only screen and (min-width : 820px) {
-  #project .text a img {
-    width: 20px;
-    height: 20px;
-  }
-}
-@media screen and (min-width : 1200px) {
-  #project .text a img {
-    width: 35px;
-    height: 35px;
-  }
-}
 #project .text .project_coment {
   position: relative;
   height: 15vh;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 @media only screen and (max-width : 819px) {
   #project .text .project_coment {
@@ -505,6 +439,7 @@ section {
 #project .text .project_coment li {
   display: none;
   font-family: "Dia_light";
+  line-height: 34px;
 }
 @media only screen and (max-width : 819px) {
   #project .text .project_coment li {
@@ -526,39 +461,51 @@ section {
 }
 #project .text .project_coment li span {
   font-family: "Dia_medium";
+  color: var(--point1-color);
 }
-#project .text .project_num {
-  position: absolute;
-  letter-spacing: -10px;
+#project .text .project_coment li p {
+  color: var(--gray);
+}
+#project .text .project_link li {
+  display: none;
+  margin-top: 30px;
+}
+#project .text .project_link li.on {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#project .text .project_link li.on a {
+  display: inline-block;
+  margin: 12px;
+}
+#project .text .project_link li.on a:hover p {
+  color: var(--white100);
+  background-color: var(--point1-color);
+}
+#project .text .project_link li.on a p {
+  display: inline;
+  font-family: "Dia_bold";
+  color: var(--black);
+  background-color: transparent;
+  padding: 8px 20px;
+  border-radius: 99px;
+  transition: 0.5s;
 }
 @media only screen and (max-width : 819px) {
-  #project .text .project_num {
-    font-size: 70px;
-    top: 32%;
-    right: 10px;
+  #project .text .project_link li.on a p {
+    font-size: 18px;
   }
 }
 @media only screen and (min-width : 820px) {
-  #project .text .project_num {
-    font-size: 70px;
-    top: 32%;
-    right: 10px;
+  #project .text .project_link li.on a p {
+    font-size: 18px;
   }
 }
 @media screen and (min-width : 1200px) {
-  #project .text .project_num {
-    font-size: 80px;
-    top: 10px;
-    right: 10px;
+  #project .text .project_link li.on a p {
+    font-size: 25px;
   }
-}
-#project .text .project_num li {
-  display: none;
-  font-family: "Dia_bold";
-  font-size: 80px;
-}
-#project .text .project_num li.on {
-  display: block;
 }
 #project .img {
   position: relative;
@@ -1067,7 +1014,6 @@ section {
   position: relative;
   opacity: 0.7;
   overflow: hidden;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1077,8 +1023,11 @@ section {
   transform: scale(1.1);
   opacity: 1;
 }
-#graphic .wrap #circle article .inner > div img {
+#graphic .wrap #circle article .inner > div a {
   width: 90%;
+}
+#graphic .wrap #circle article .inner > div a img {
+  width: 100%;
 }
 #graphic #space-container-top {
   opacity: 1;

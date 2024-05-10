@@ -52,7 +52,7 @@ section {
         top: 40px;
         left: 50%;
         transform: translatex(-50%);
-        z-index: 9999;
+        z-index: 999;
 
         ul {
             align-items: center;
@@ -462,66 +462,6 @@ section {
             font-family: 'Dia_bold';
         }
 
-        a {
-            @media #{$phone} {
-                margin-top: 30px;
-            }
-
-            @media #{$tablet} {
-                margin-top: 30px;
-            }
-
-            @media #{$desktop} {
-                margin-top: 100px;
-            }
-
-            border: 3px solid #000;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--point2-color);
-            color: var(--white100);
-            border-radius: 99px;
-            padding: 10px 30px;
-            gap: 10px;
-
-            p {
-                @media #{$phone} {
-                    font-size: 20px;
-                }
-
-                @media #{$tablet} {
-                    font-size: 20px;
-                }
-
-                @media #{$desktop} {
-                    font-size: 30px;
-                }
-
-                font-family: 'Dia_bold';
-                color: var(--black);
-            }
-
-            img {
-                @media #{$phone} {
-                    width: 20px;
-                    height: 20px;
-                }
-
-                @media #{$tablet} {
-                    width: 20px;
-                    height: 20px;
-                }
-
-                @media #{$desktop} {
-                    width: 35px;
-                    height: 35px;
-                }
-
-                animation: spanAni 8s infinite linear;
-            }
-        }
-
         .project_coment {
             @media #{$phone} {
                 height: 10vh;
@@ -540,7 +480,7 @@ section {
 
             position: relative;
             height: 15vh;
-            margin-top: 60px;
+            margin-top: 50px;
 
             li {
                 @media #{$phone} {
@@ -557,6 +497,7 @@ section {
 
                 display: none;
                 font-family: 'Dia_light';
+                line-height: 34px;
 
                 &.on {
                     display: block;
@@ -564,43 +505,60 @@ section {
 
                 span {
                     font-family: 'Dia_medium';
+                    color: var(--point1-color);
+                }
+
+                p {
+                    color: var(--gray);
                 }
             }
         }
 
-        .project_num {
-            @media #{$phone} {
-                font-size: 70px;
-                top: 32%;
-                right: 10px;
-            }
-
-            @media #{$tablet} {
-                font-size: 70px;
-                top: 32%;
-                right: 10px;
-            }
-
-            @media #{$desktop} {
-                font-size: 80px;
-                top: 10px;
-                right: 10px;
-            }
-
-            position: absolute;
-            letter-spacing: -10px;
-
+        .project_link {
             li {
                 display: none;
-                font-family: 'Dia_bold';
-                font-size: 80px;
+                margin-top: 30px;
 
                 &.on {
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    a {
+                        display: inline-block;
+                        margin: 12px;
+
+                        &:hover {
+                            p {
+                                color: var(--white100);
+                                background-color: var(--point1-color);
+                            }
+                        }
+
+                        p {
+                            @media #{$phone} {
+                                font-size: 18px;
+                            }
+
+                            @media #{$tablet} {
+                                font-size: 18px;
+                            }
+
+                            @media #{$desktop} {
+                                font-size: 25px;
+                            }
+
+                            display: inline;
+                            font-family: 'Dia_bold';
+                            color: var(--black);
+                            background-color: transparent;
+                            padding: 8px 20px;
+                            border-radius: 99px;
+                            transition: 0.5s;
+                        }
+                    }
                 }
             }
-
-
         }
     }
 
@@ -1202,7 +1160,6 @@ section {
                         position: relative;
                         opacity: 0.7;
                         overflow: hidden;
-                        cursor: pointer;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -1213,8 +1170,13 @@ section {
                             opacity: 1;
                         }
 
-                        img {
+
+                        a {
                             width: 90%;
+
+                            img {
+                                width: 100%;
+                            }
                         }
                     }
                 }

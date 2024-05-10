@@ -31,7 +31,7 @@ $('#project .nav li a').click(function (e) {
     $('#project .text').removeClass('active')
 
     $('#project .project_coment li').removeClass('on')
-    $('#project .project_num li').removeClass('on')
+    $('#project .project_link li').removeClass('on')    
 
     let text = $(this).attr('data-text');
     let idx = $(this).parent().index();
@@ -46,7 +46,7 @@ $('#project .nav li a').click(function (e) {
         $('#project .text').addClass('active')
         $('#project .text h2').text(text);
         $('#project .project_coment li').eq(idx).addClass('on')
-        $('#project .project_num li').eq(idx).addClass('on')
+        $('#project .project_link li').eq(idx).addClass('on')
     }, 850)
 })
 
