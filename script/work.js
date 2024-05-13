@@ -88,6 +88,7 @@ $('#work ul li').mouseenter(function () {
     $('#work .coment p').each(function () {
         let find1 = $(this).attr('data-find');
         if (text === find1) {
+            $('#work .coment .default').css('display', 'none');
             $(this).css('display', 'block');
         }
     });
@@ -103,5 +104,6 @@ $('#work ul li').mouseenter(function () {
 }).mouseleave(function () {
     $('#work h2').text('WORK');
     $('#work .coment p').css('display', 'none');
+    $('#work .coment .default').css('display', 'block');
     $('#work .media ul li').removeClass('on')
 });

@@ -755,6 +755,10 @@ section {
                 font-family: 'Dia_light';
                 color: var(--white100);
 
+                &.default {
+                    display: block;
+                }
+
                 span {
                     display: block;
                     padding: 20px 0;
@@ -1240,7 +1244,7 @@ section {
     .item {
         position: absolute;
         width: 100%;
-        z-index: 9999;
+        z-index: 99;
         top: -160px;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -1449,8 +1453,6 @@ section {
                 box-sizing: border-box;
                 flex-wrap: wrap;
                 border-radius: 9999px;
-                box-shadow: 10px 10px 20px rgba(204, 204, 204, 0.658);
-                opacity: 0.4;
                 transform: scale(0.8);
                 transition: opacity 1s, transform 1s;
 
@@ -1539,7 +1541,7 @@ section {
 
         &::before {
             content: "";
-            background: url(../img/star_w.png);
+            background: url(../img/shuttle.png);
             background-size: cover;
             width: 40px;
             height: 40px;
@@ -1547,12 +1549,12 @@ section {
             position: absolute;
             top: 50%;
             left: 20px;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) rotate(180deg);
         }
 
         &:hover {
             &::before {
-                transform: translate(-50%, -50%) rotate(-90deg);
+                transform: translate(-50%, -50%) rotate(180deg) scale(1.1);
             }
 
             span {
@@ -1586,7 +1588,7 @@ section {
 
         &::before {
             content: "";
-            background: url(../img/star_w.png);
+            background: url(../img/shuttle.png);
             background-size: cover;
             width: 40px;
             height: 40px;
@@ -1599,7 +1601,7 @@ section {
 
         &:hover {
             &::before {
-                transform: translate(-50%, -50%) rotate(90deg);
+                transform: translate(-50%, -50%) scale(1.1);
             }
 
             span {
@@ -1629,20 +1631,6 @@ section {
             transition: 1s;
             z-index: 50;
         }
-
-        // &::after {
-        //     content: '';
-        //     width: 40%;
-        //     height: 80%;
-        //     border-radius: 9999px;
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 0%;
-        //     transform: translate(-50%, -50%);
-        //     background: url(https://grainy-gradients.vercel.app/noise.svg);
-        //     opacity: 60%;
-        //     z-index: 50;
-        // }
     }
 }
 
