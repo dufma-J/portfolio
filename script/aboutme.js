@@ -14,9 +14,11 @@ const frame = document.querySelector("#aboutme .wrap");
 const lists = frame.querySelectorAll("#aboutme article");
 const prev = document.querySelector("#aboutme .btnPrev");
 const next = document.querySelector("#aboutme .btnNext");
+const skill = document.querySelector("#aboutme .btnSkill");
+const contact = document.querySelector("#aboutme .btnContact");
 
 const moon = document.querySelector('#aboutme .moon img')
-const deg = 45; //각각의 article요소가 회전할 각도
+const deg = 60; //각각의 article요소가 회전할 각도
 const len = lists.length - 1; //순번이 0부터 시작하므로 전체 개수에서 1을 빼줌
 let i = 0;
 let num = 0;
@@ -60,6 +62,28 @@ next.addEventListener("click", () => {
     moon.style.transform = `translate(-50%, -50%) rotate(${deg * num}deg)`;
 
     (active == len) ? active = 0 : active++;
+    activation(active, lists);
+});
+
+skill.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    num = 2;
+    frame.style.transform = `rotate(${deg * num}deg)`;
+    moon.style.transform = `translate(-50%, -50%) rotate(${deg * num}deg)`;
+
+    active = 4;
+    activation(active, lists);
+});
+
+contact.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    num = 1;
+    frame.style.transform = `rotate(${deg * num}deg)`;
+    moon.style.transform = `translate(-50%, -50%) rotate(${deg * num}deg)`;
+
+    active = 5;
     activation(active, lists);
 });
 
