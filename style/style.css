@@ -581,7 +581,7 @@ section {
   background-size: cover;
 }
 #project .img ul li:nth-child(4) {
-  background: url(../img/splide4.jpg) no-repeat center;
+  background: url(../img/Business\ Card.png) no-repeat center;
   background-size: cover;
 }
 #project .splide {
@@ -1299,6 +1299,8 @@ section {
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(1) img {
   transform: rotate(-90deg);
+  width: 40px;
+  height: 40px;
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(2) {
   top: 50%;
@@ -1307,6 +1309,8 @@ section {
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(2) img {
   transform: rotate(-60deg);
+  width: 40px;
+  height: 40px;
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(3) {
   top: 50%;
@@ -1315,6 +1319,8 @@ section {
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(3) img {
   transform: rotate(-30deg);
+  width: 45px;
+  height: 45px;
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(4) {
   top: 50%;
@@ -1323,6 +1329,8 @@ section {
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(4) img {
   transform: rotate(0deg);
+  width: 55px;
+  height: 55px;
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(5) {
   top: 50%;
@@ -1339,6 +1347,8 @@ section {
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(6) img {
   transform: rotate(60deg);
+  width: 40px;
+  height: 40px;
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(7) {
   top: 50%;
@@ -1347,6 +1357,8 @@ section {
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(7) img {
   transform: rotate(90deg);
+  width: 45px;
+  height: 45px;
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(8) {
   top: 50%;
@@ -1379,6 +1391,8 @@ section {
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(11) img {
   transform: rotate(210deg);
+  width: 60px;
+  height: 60px;
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(12) {
   top: 50%;
@@ -1387,6 +1401,8 @@ section {
 }
 #aboutme .wrap article .inner .skill ul li:nth-child(12) img {
   transform: rotate(240deg);
+  width: 60px;
+  height: 60px;
 }
 #aboutme .wrap article .inner .skill ul li img {
   width: 50px;
