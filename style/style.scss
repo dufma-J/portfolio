@@ -1513,14 +1513,24 @@ section {
                             &:nth-child(2) {
                                 top: 50%;
                                 left: 0%;
-                                transform: translateY(-50%) rotate(-45deg);
+                                transform: translateY(-50%) rotate(-30deg);
 
                                 img {
-                                    transform: rotate(-45deg);
+                                    transform: rotate(-60deg);
                                 }
                             }
 
                             &:nth-child(3) {
+                                top: 50%;
+                                left: 0%;
+                                transform: translateY(-50%) rotate(-60deg);
+
+                                img {
+                                    transform: rotate(-30deg);
+                                }
+                            }
+
+                            &:nth-child(4) {
                                 top: 50%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(-90deg);
@@ -1530,38 +1540,59 @@ section {
                                 }
                             }
 
-                            &:nth-child(4) {
-                                top: 50%;
-                                left: 0%;
-                                transform: translateY(-50%) rotate(-135deg);
-
-                                img {
-                                    transform: rotate(45deg);
-                                }
-                            }
-
                             &:nth-child(5) {
                                 top: 50%;
                                 left: 0%;
-                                transform: translateY(-50%) rotate(-180deg);
+                                transform: translateY(-50%) rotate(-120deg);
 
                                 img {
-                                    transform: rotate(90deg);
+                                    transform: rotate(30deg);
                                 }
                             }
 
                             &:nth-child(6) {
                                 top: 50%;
                                 left: 0%;
-                                transform: translateY(-50%) rotate(-225deg);
+                                transform: translateY(-50%) rotate(-150deg);
 
                                 
                                 img {
-                                    transform: rotate(135deg);
+                                    transform: rotate(60deg);
                                 }
                             }
 
                             &:nth-child(7) {
+                                top: 50%;
+                                left: 0%;
+                                transform: translateY(-50%) rotate(-180deg);
+
+                                
+                                img {
+                                    transform: rotate(90deg);
+                                }
+                            }
+
+                            &:nth-child(8) {
+                                top: 50%;
+                                left: 0%;
+                                transform: translateY(-50%) rotate(-210deg);
+
+                                
+                                img {
+                                    transform: rotate(120deg);
+                                }
+                            }
+                            &:nth-child(9) {
+                                top: 50%;
+                                left: 0%;
+                                transform: translateY(-50%) rotate(-240deg);
+
+                                
+                                img {
+                                    transform: rotate(150deg);
+                                }
+                            }
+                            &:nth-child(10) {
                                 top: 50%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(-270deg);
@@ -1571,15 +1602,24 @@ section {
                                     transform: rotate(180deg);
                                 }
                             }
-
-                            &:nth-child(8) {
+                            &:nth-child(11) {
                                 top: 50%;
                                 left: 0%;
-                                transform: translateY(-50%) rotate(45deg);
+                                transform: translateY(-50%) rotate(-300deg);
 
                                 
                                 img {
-                                    transform: rotate(225deg);
+                                    transform: rotate(210deg);
+                                }
+                            }
+                            &:nth-child(12) {
+                                top: 50%;
+                                left: 0%;
+                                transform: translateY(-50%) rotate(-330deg);
+
+                                
+                                img {
+                                    transform: rotate(240deg);
                                 }
                             }
 
