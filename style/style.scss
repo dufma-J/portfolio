@@ -1491,157 +1491,271 @@ section {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 640px;
-                    height: 640px;
+                    width: 660px;
+                    height: 650px;
 
                     ul {
                         li {
-                            width: 100%;
+                            width: 90%;
                             height: 50px;
                             position: absolute;
+
+                            div {
+                                background-color: var(--about-color);
+                                border-radius: 999px;
+                                padding: 5px;
+                                position: relative;
+                                transition: 0.35s;
+                                cursor: pointer;
+
+                                &:hover {
+                                    &::before {
+                                        opacity: 1;
+                                        width: 200px;
+                                        z-index: -1;
+                                    }
+                                }
+
+                                &::before {
+                                    content: '텍스트';
+                                    width: 0px;
+                                    height: 100%;
+                                    border-radius: 999px;
+                                    font-size: 15px;
+                                    padding: 0px 5px;
+                                    position: absolute;
+                                    top: 0%;
+                                    left: 0%;
+                                    opacity: 0;
+                                    background-color: inherit;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding-left: 100%;
+                                    transition: 0.5s;
+                                    z-index: 999;
+                                }
+
+                                img {
+                                    width: 80%;
+                                    height: 80%;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    z-index: 99;
+                                }
+                            }
 
                             &:nth-child(1) {
                                 top: 50%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(0deg);
 
-                                img {
+                                div {
                                     transform: rotate(-90deg);
-                                    width: 40px;
-                                    height: 40px;
+                                    width: 50px;
+                                    height: 50px;
+
+                                    &::before {
+                                        content: '언어를 읽고 간단한 코드를 작성할 수 있습니다.';
+                                    }
                                 }
                             }
 
                             &:nth-child(2) {
-                                top: 50%;
-                                left: 0%;
+                                top: 56%;
+                                left: 3%;
                                 transform: translateY(-50%) rotate(-30deg);
 
-                                img {
+                                div {
                                     transform: rotate(-60deg);
-                                    width: 40px;
-                                    height: 40px;
+                                    width: 50px;
+                                    height: 50px;
+
+                                    &::before {
+                                        content: '깃허브를 사용할 수 있습니다.';
+                                    }
                                 }
                             }
 
                             &:nth-child(3) {
-                                top: 50%;
-                                left: 0%;
+                                top: 53%;
+                                left: 3%;
                                 transform: translateY(-50%) rotate(-60deg);
 
-                                img {
+                                div {
                                     transform: rotate(-30deg);
-                                    width: 45px;
-                                    height: 45px;
+                                    width: 55px;
+                                    height: 55px;
+                                    background-color: #01577C;
+
+                                    &::before {
+                                        content: '코드를 작성하여 홈페이지에 동적인 요소를 추가할 수 있습니다.';
+                                    }
+
+                                    img {
+                                        width: 60%;
+                                        height: 60%;
+                                    }
                                 }
                             }
 
                             &:nth-child(4) {
-                                top: 50%;
+                                top: 60%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(-90deg);
 
-                                img {
+                                div {
                                     transform: rotate(0deg);
-                                    width: 55px;
-                                    height: 55px;
+                                    width: 60px;
+                                    height: 60px;
+
+                                    &::before {
+                                        content: '언어를 읽고 간단한 코드를 작성할 수 있습니다.';
+                                    }
                                 }
                             }
 
                             &:nth-child(5) {
-                                top: 50%;
+                                top: 61%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(-120deg);
 
-                                img {
+                                div {
                                     transform: rotate(30deg);
+                                    width: 70px;
+                                    height: 70px;
+                                    background-color: #236786;
+
+                                    &::before {
+                                        content: '간단한 그래픽 작업이 가능합니다.';
+                                    }
+
+                                    img {
+                                        width: 70%;
+                                        height: 70%;
+                                    }
                                 }
                             }
 
                             &:nth-child(6) {
-                                top: 50%;
-                                left: 0%;
+                                top: 56%;
+                                left: 6%;
                                 transform: translateY(-50%) rotate(-150deg);
 
-                                
-                                img {
+                                div {
                                     transform: rotate(60deg);
-                                    width: 40px;
-                                    height: 40px;
+                                    width: 50px;
+                                    height: 50px;
+
+                                    &::before {
+                                        content: '언어를 읽고 간단한 코드를 작성할 수 있습니다.';
+                                    }
                                 }
                             }
 
                             &:nth-child(7) {
                                 top: 50%;
-                                left: 0%;
+                                right: 0%;
                                 transform: translateY(-50%) rotate(-180deg);
 
-                                
-                                img {
+                                div {
                                     transform: rotate(90deg);
-                                    width: 45px;
-                                    height: 45px;
+                                    width: 55px;
+                                    height: 55px;
+
+                                    &::before {
+                                        content: '코드를 작성하여 동적인 홈페이지를 제작할 수 있습니다.';
+                                    }
                                 }
                             }
 
                             &:nth-child(8) {
-                                top: 50%;
-                                left: 0%;
-                                transform: translateY(-50%) rotate(-210deg);
+                                top: 44%;
+                                right: 0%;
+                                transform: translatey(-50%) rotate(-210deg);
 
-                                
-                                img {
+                                div {
                                     transform: rotate(120deg);
+                                    width: 80px;
+                                    height: 80px;
+                                    background-color: #2c94c0;
+
+                                    &::before {
+                                        content: '코드를 작성하여 홈페이지를 제작할 수 있습니다.';
+                                    }
                                 }
                             }
+
                             &:nth-child(9) {
-                                top: 50%;
+                                top: 43%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(-240deg);
 
-                                
-                                img {
+                                div {
                                     transform: rotate(150deg);
+                                    width: 60px;
+                                    height: 60px;
+
+                                    &::before {
+                                        content: '언어를 읽고 간단한 코드를 작성할 수 있습니다.';
+                                    }
                                 }
                             }
+
                             &:nth-child(10) {
-                                top: 50%;
+                                top: 46%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(-270deg);
 
-                                
-                                img {
+                                div {
                                     transform: rotate(180deg);
+                                    width: 60px;
+                                    height: 60px;
+
+                                    &::before {
+                                        content: '원하는 작업물, 프로토 타입 등을 제작할 수 있습니다.';
+                                    }
                                 }
                             }
+
                             &:nth-child(11) {
-                                top: 50%;
+                                top: 44%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(-300deg);
 
-                                
-                                img {
+                                div {
                                     transform: rotate(210deg);
-                                    width: 60px;
-                                    height: 60px;
+                                    width: 70px;
+                                    height: 70px;
+
+                                    &::before {
+                                        content: '코드를 작성하여 홈페이지를 제작할 수 있습니다.';
+                                    }
                                 }
                             }
+
                             &:nth-child(12) {
-                                top: 50%;
+                                top: 44%;
                                 left: 0%;
                                 transform: translateY(-50%) rotate(-330deg);
 
-                                
-                                img {
+                                div {
                                     transform: rotate(240deg);
-                                    width: 60px;
-                                    height: 60px;
-                                }
-                            }
+                                    width: 70px;
+                                    height: 70px;
 
-                            img {
-                                width: 50px;
-                                height: 50px;
+                                    &::before {
+                                        content: '코드를 작성하여 홈페이지를 제작할 수 있습니다.';
+                                    }
+
+                                    img {
+                                        width: 70%;
+                                        height: 70%;
+                                    }
+                                }
                             }
                         }
                     }
