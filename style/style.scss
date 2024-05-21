@@ -111,7 +111,6 @@ section {
             height: 50px;
             z-index: 999;
 
-
             &.on {
                 span {
                     &:nth-child(1) {
@@ -129,13 +128,12 @@ section {
             }
 
             span {
-                transition: 0.35s;
+                transition: 0.5s;
                 display: block;
                 width: 40px;
                 height: 5px;
                 margin: 10px 5px;
-                border-radius: 99px;
-                background: var(--black);
+                background: var(--white100);
             }
         }
 
@@ -152,12 +150,14 @@ section {
 
             ul {
                 font-size: 35px;
+                color: var(--white100);
 
                 li {
                     margin: 20px;
 
                     a {
                         display: block;
+                        font-family: 'Dia_bold';
                     }
                 }
             }
@@ -448,11 +448,11 @@ section {
 
         h2 {
             @media #{$phone} {
-                font-size: 70px;
+                font-size: 60px;
             }
 
             @media #{$tablet} {
-                font-size: 70px;
+                font-size: 60px;
             }
 
             @media #{$desktop} {
@@ -492,12 +492,12 @@ section {
                 }
 
                 @media #{$desktop} {
-                    font-size: 24px;
+                    font-size: 1.2vw;
+                    line-height: 1.3vw;
                 }
 
                 display: none;
                 font-family: 'Dia_light';
-                line-height: 34px;
 
                 &.on {
                     display: block;
@@ -521,8 +521,19 @@ section {
 
                 &.on {
                     display: flex;
-                    flex-direction: column;
                     gap: 10px;
+
+                    @media #{$phone} {
+                        flex-direction: row;
+                    }
+
+                    @media #{$tablet} {
+                        flex-direction: row;
+                    }
+
+                    @media #{$desktop} {
+                        flex-direction: column;
+                    }
 
                     a {
                         display: inline-block;
@@ -541,7 +552,7 @@ section {
                             }
 
                             @media #{$tablet} {
-                                font-size: 18px;
+                                font-size: 15px;
                             }
 
                             @media #{$desktop} {
@@ -770,6 +781,21 @@ section {
         }
 
         .media {
+            @media #{$phone} {
+                left: 5%;
+                top: 82%;
+            }
+
+            @media #{$tablet} {
+                left: 5%;
+                top: 82%;
+            }
+
+            @media #{$desktop} {
+                left: 1.5%;
+                top: 42%;
+            }
+
             position: absolute;
             left: 1.5%;
             top: 42%;
@@ -813,11 +839,11 @@ section {
 
             &.list1 {
                 @media #{$phone} {
-                    top: 0%;
+                    top: 5%;
                 }
 
                 @media #{$tablet} {
-                    top: 0%;
+                    top: 5%;
                 }
 
                 @media #{$desktop} {
@@ -950,7 +976,7 @@ section {
 
             &.list2 {
                 @media #{$phone} {
-                    top: 26%;
+                    top: 30%;
                 }
 
                 @media #{$tablet} {
@@ -1075,13 +1101,13 @@ section {
 
             li {
                 @media #{$phone} {
-                    width: 200px;
-                    height: 200px;
+                    width: 30vw;
+                    height: 30vw;
                 }
 
                 @media #{$tablet} {
-                    width: 280px;
-                    height: 280px;
+                    width: 27.5vw;
+                    height: 27.5vw;
                 }
 
                 @media #{$desktop} {
@@ -1470,10 +1496,10 @@ section {
                     width: 380px;
                     z-index: 60;
 
-                    &.txt1{
+                    &.txt1 {
                         width: 350px;
 
-                        p{
+                        p {
                             font-size: 17px;
                             line-height: 22px;
                         }

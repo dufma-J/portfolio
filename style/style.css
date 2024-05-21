@@ -111,13 +111,12 @@ section {
   transform: rotate(-45deg);
 }
 #home .mobile-menu .icon span {
-  transition: 0.35s;
+  transition: 0.5s;
   display: block;
   width: 40px;
   height: 5px;
   margin: 10px 5px;
-  border-radius: 99px;
-  background: var(--black);
+  background: var(--white100);
 }
 #home .mobile-menu .menu {
   position: fixed;
@@ -132,12 +131,14 @@ section {
 }
 #home .mobile-menu .menu ul {
   font-size: 35px;
+  color: var(--white100);
 }
 #home .mobile-menu .menu ul li {
   margin: 20px;
 }
 #home .mobile-menu .menu ul li a {
   display: block;
+  font-family: "Dia_bold";
 }
 #home .parallax_camera {
   position: absolute;
@@ -401,12 +402,12 @@ section {
 }
 @media only screen and (max-width : 819px) {
   #project .text h2 {
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 @media only screen and (min-width : 820px) {
   #project .text h2 {
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 @media screen and (min-width : 1200px) {
@@ -440,7 +441,6 @@ section {
 #project .text .project_coment li {
   display: none;
   font-family: "Dia_light";
-  line-height: 34px;
 }
 @media only screen and (max-width : 819px) {
   #project .text .project_coment li {
@@ -454,7 +454,8 @@ section {
 }
 @media screen and (min-width : 1200px) {
   #project .text .project_coment li {
-    font-size: 24px;
+    font-size: 1.2vw;
+    line-height: 1.3vw;
   }
 }
 #project .text .project_coment li.on {
@@ -473,8 +474,22 @@ section {
 }
 #project .text .project_link li.on {
   display: flex;
-  flex-direction: column;
   gap: 10px;
+}
+@media only screen and (max-width : 819px) {
+  #project .text .project_link li.on {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #project .text .project_link li.on {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #project .text .project_link li.on {
+    flex-direction: column;
+  }
 }
 #project .text .project_link li.on a {
   display: inline-block;
@@ -500,7 +515,7 @@ section {
 }
 @media only screen and (min-width : 820px) {
   #project .text .project_link li.on a p {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width : 1200px) {
@@ -712,6 +727,24 @@ section {
   left: 1.5%;
   top: 42%;
 }
+@media only screen and (max-width : 819px) {
+  #work .work-inner .media {
+    left: 5%;
+    top: 82%;
+  }
+}
+@media only screen and (min-width : 820px) {
+  #work .work-inner .media {
+    left: 5%;
+    top: 82%;
+  }
+}
+@media screen and (min-width : 1200px) {
+  #work .work-inner .media {
+    left: 1.5%;
+    top: 42%;
+  }
+}
 #work .work-inner .media ul {
   display: flex;
   gap: 20px;
@@ -749,12 +782,12 @@ section {
 }
 @media only screen and (max-width : 819px) {
   #work .work-inner ul.list1 {
-    top: 0%;
+    top: 5%;
   }
 }
 @media only screen and (min-width : 820px) {
   #work .work-inner ul.list1 {
-    top: 0%;
+    top: 5%;
   }
 }
 @media screen and (min-width : 1200px) {
@@ -845,7 +878,7 @@ section {
 }
 @media only screen and (max-width : 819px) {
   #work .work-inner ul.list2 {
-    top: 26%;
+    top: 30%;
   }
 }
 @media only screen and (min-width : 820px) {
@@ -936,14 +969,14 @@ section {
 }
 @media only screen and (max-width : 819px) {
   #work .work-inner ul li {
-    width: 200px;
-    height: 200px;
+    width: 30vw;
+    height: 30vw;
   }
 }
 @media only screen and (min-width : 820px) {
   #work .work-inner ul li {
-    width: 280px;
-    height: 280px;
+    width: 27.5vw;
+    height: 27.5vw;
   }
 }
 @media screen and (min-width : 1200px) {

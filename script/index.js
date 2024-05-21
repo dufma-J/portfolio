@@ -61,10 +61,16 @@ gsap.utils.toArray('section').forEach(item => {
             gsap.to("nav ul li a", {
                 color: textColor,
             });
+            gsap.to(".icon span", {
+                backgroundColor: textColor,
+            });
         },
         onEnterBack: () => {
             gsap.to("nav ul li a", {
                 color: textColor,
+            });
+            gsap.to(".icon span", {
+                backgroundColor: textColor,
             });
         },
     });
