@@ -710,7 +710,7 @@ section {
 #work .work-inner .media {
   position: absolute;
   left: 1.5%;
-  top: 43%;
+  top: 42%;
 }
 #work .work-inner .media ul {
   display: flex;
@@ -726,8 +726,8 @@ section {
   display: flex;
 }
 #work .work-inner .media ul li img {
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
 }
 #work .work-inner ul {
   position: absolute;
