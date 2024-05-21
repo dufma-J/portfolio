@@ -480,7 +480,7 @@ section {
 
             position: relative;
             height: 15vh;
-            margin-top: 50px;
+            margin-top: 30px;
 
             li {
                 @media #{$phone} {
@@ -493,7 +493,6 @@ section {
 
                 @media #{$desktop} {
                     font-size: 1.2vw;
-                    line-height: 1.3vw;
                 }
 
                 display: none;
@@ -537,7 +536,7 @@ section {
 
                     a {
                         display: inline-block;
-                        margin: 12px;
+                        margin: 10px;
 
                         &:hover {
                             p {
@@ -556,14 +555,14 @@ section {
                             }
 
                             @media #{$desktop} {
-                                font-size: 25px;
+                                font-size: 22px;
                             }
 
                             display: inline;
                             font-family: 'Dia_bold';
                             color: var(--black);
                             background-color: transparent;
-                            padding: 8px 20px;
+                            padding: 5px 20px;
                             border-radius: 99px;
                             transition: 0.5s;
                         }

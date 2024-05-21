@@ -418,7 +418,7 @@ section {
 #project .text .project_coment {
   position: relative;
   height: 15vh;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 @media only screen and (max-width : 819px) {
   #project .text .project_coment {
@@ -455,7 +455,6 @@ section {
 @media screen and (min-width : 1200px) {
   #project .text .project_coment li {
     font-size: 1.2vw;
-    line-height: 1.3vw;
   }
 }
 #project .text .project_coment li.on {
@@ -493,7 +492,7 @@ section {
 }
 #project .text .project_link li.on a {
   display: inline-block;
-  margin: 12px;
+  margin: 10px;
 }
 #project .text .project_link li.on a:hover p {
   color: var(--white100);
@@ -504,7 +503,7 @@ section {
   font-family: "Dia_bold";
   color: var(--black);
   background-color: transparent;
-  padding: 8px 20px;
+  padding: 5px 20px;
   border-radius: 99px;
   transition: 0.5s;
 }
@@ -520,7 +519,7 @@ section {
 }
 @media screen and (min-width : 1200px) {
   #project .text .project_link li.on a p {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 #project .img {
